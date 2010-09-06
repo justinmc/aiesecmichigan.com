@@ -1,0 +1,402 @@
+a {cursor: pointer;}
+a.darkBG:link {color: #d8dfe5; text-decoration: none;}
+a.darkBG:visited {color: #d8dfe5; text-decoration: none;} 
+a.darkBG:hover {color: #ffffff; text-decoration: underline;} 
+a:link {color: #ff8400; text-decoration: underline;}
+a:visited {color: #ff8400; text-decoration: underline;}
+a:hover {color: #b7baaf; text-decoration: none;} 
+
+#darkBG:link {color: #d8dfe5; text-decoration: none;}
+#darkBG:visited {color: #d8dfe5; text-decoration: none;} 
+#darkBG:hover {color: #ffffff; text-decoration: underline;}
+
+body
+{ 
+background: #ffffff;
+font-size: 13pt;
+text-align: center;
+height: 100%;
+overflow-x: hidden;
+}
+
+p
+{
+text-indent: 40px;
+font-size: 12pt;
+}
+
+h1
+{
+color: #000000;
+text-decoration: none;
+font-size: 28pt;
+text-align: center;
+}
+
+h2
+{
+text-decoration: underline;
+font-size: 16pt;
+}
+
+h3
+{
+font-size: 13pt;
+text-align: left;
+}
+
+h4
+{
+color: #f8a750;
+text-decoration: underline;
+font-size: 16pt;
+text-align: left;
+}
+
+/* The member login bar */
+.bannerTop
+{
+	background: #12489e;
+	position: absolute; top: 0px; left: 0px;
+	width: 100%; height: 32px;
+	z-index: 1;
+}
+
+/* Just holds a fancy image in the top right */
+   .bannerTopRight
+   {
+   	   background-image: url('../images/bannerTopRight.jpg');
+	   position: absolute; top: 0px; right: 0px;
+	   height: inherit; width: 224px;
+   }
+
+/* Holds the content in banner (login stuff for now, top left) */
+   .bannerContent
+   {
+   	   background: transparent;
+	   color: #ffffff;
+	   position: absolute; top: 3px; left: 12px;
+	   heigth: inherit; width: 500px;
+	   border: 0px white solid;
+	   text-align: left;
+   }
+   
+/* Fancy fade background at the top */
+.background
+{
+	margin: 0 auto;
+	background-image: url('../images/backTop.jpg');
+    position: absolute; top: 32px;
+	height: 800px; width: 1400px;
+	z-index: 0;
+}
+
+/* wraps the all div and the bottombar together, so that bottombar can stick to the bottom of the page */
+.wrapper
+{
+	background: transparent;
+	position: relative;
+	height: auto; width: 101%;
+}
+
+/* contains everything besides the background */
+.all
+{
+background: transparent;
+border: 0px pink solid;
+margin: 0 auto;
+height: auto; width: 900px;
+position: relative; top: 34px; left: 16px;
+overflow: hidden;
+}
+
+/* holds the title image */
+   .titlebar
+   {
+   background: transparent;
+   border: 0px blue solid;
+   height: 83px; width: 100%;
+   margin: 0 0 10px 0;
+   position: relative; top: 0px; left: 0px;
+   z-index: 1;
+   }
+
+/* holds the horizontal navbar */
+   .navbar
+   {
+   background: #fb9411;
+   color: #ffffff;
+   border: 0px green solid;
+   height: 28px; width: 100%;
+   position: relative; top: 0px; left: 0px;
+   z-index: 1;
+   }
+   
+/* invisible, holds the magically appearing submenus */
+   .navMenu
+   {
+   position: absolute; top: 120px; left: 0px;
+   height: 100px; width: 900px;
+   background: transparent;
+   visibility: hidden;
+   z-index: 2;
+   }
+   
+/* the magically appearing submenus */
+      #subMenu1
+	  {
+	  	float: left;
+		height: auto; width: 100px;
+		background: #f4c991;
+		visibility: hidden;
+		overflow: hidden;
+	  }
+      #subMenu2
+	  {
+	  	float: left;
+		height: auto; width: 100px;
+		background: #f4c991;
+		visibility: hidden;
+		overflow: hidden;
+	  }
+   
+/* Holds the friendly random image in the center banner (not random yet...) */
+   .banner
+   {
+   	background: #ffffff;
+	position: relative; top: 4px; left: 0px;
+	height: 242px; width: inherit;
+	z-index: 1;
+	white-space: nowrap;
+	overflow: auto;
+    overflow-y: hidden;
+   }
+
+/* Holds fancy topbar image above content */
+   .topBar
+   {
+   	background-image: url('../images/top.jpg');
+	position: relative; top: 4px; left: 0px;
+	height: 40px; width: inherit;
+	z-index: 1;
+   } 
+ 
+/* newsbar type thing all down the left */
+   .leftbar
+   {
+   background: transparent;
+   color: #000000;
+   text-align: left;
+   border-right: 1px #ececec solid;
+   padding: 10px;
+   height: 2000px; width: 244px;
+   position: absolute; top: 270px; left: 0px;
+   z-index: 0;
+   overflow: hidden;
+   }
+   
+/* holds all main content of each page */
+   .content
+   {
+   border: 0px red solid;
+   text-align: left;
+   height: auto; width: 614px;
+   min-height: 1400px;
+   position: relative; top: 0px; left: 264px;
+   padding: 10px;
+   }
+
+/* My 3 column ep, lc joiner, and partner info place */
+.bottomInfo
+{
+ background: #ffffff;
+ height: 740px; width: 100%;
+ border: 0px red solid;
+ position: relative; top: 0px; left: 0px;
+}
+
+/* left column in content */
+   .colLeft
+   {
+   	color: #ffffff;
+	text-align: left;
+   	background: #80c805;
+	position: absolute; top: 0px; left: 0px;
+	height: 640px; width: 295px;
+   }
+
+/* middle column in content */
+   .colMid
+   {
+   	color: #ffffff;
+	text-align: left;
+   	background: #39bcf0;
+	position: absolute; top: 0px; left: 303px;
+	height: 640px; width: 295px;
+   }
+   
+/* right column in content */
+   .colRight
+   {
+   	color: #ffffff;
+	text-align: left;
+   	background: #a72201;
+	position: absolute; top: 0px; left: 606px;
+	height: 640px; width: 295px;
+   }
+   
+/* holds graphic at bottom of colLeft  */
+      .colLeftBot
+	  {
+	  	background-image: url('../images/colGreen.jpg');
+		color: #ffffff;
+		text-align: center;
+		position: absolute; bottom: 0px; left: 0px;
+		height: 63px; width: 295px;
+	  }
+
+/* holds graphic at bottom of colMid  */
+      .colMidBot
+	  {
+	  	background-image: url('../images/colBlue.jpg');
+		color: #ffffff;
+		text-align: center;
+		position: absolute; bottom: 0px; left: 0px;
+		height: 63px; width: 295px;
+	  }
+	  
+/* holds graphic at bottom of colRight  */
+      .colRightBot
+	  {
+	  	background-image: url('../images/colRed.jpg');
+		color: #ffffff;
+		text-align: center;
+		position: absolute; bottom: 0px; left: 0px;
+		height: 63px; width: 295px;
+	  }
+
+/* some sort of decoration at the bottom of the main div */
+   .bottombarContent
+   {
+   margin: 0 auto;
+   background: #fb9411;
+   color: #ffffff;
+   height: 170px; width: 900px;
+   position: absolute; bottom: 0px; left: 0px;
+   z-index: 1;
+   }
+
+/* Columns for the cool bottom links */
+	  .bottombarColLeft
+	  {
+      text-align: left;
+	  border-right: 1px #f8a942 solid;	  
+	  height: 108px; width: 200px;
+	  position: absolute; top: 40px; left: 32px;
+	  }
+	  .bottombarColMid
+	  {
+      text-align: left;
+	  border-right: 1px #f8a942 solid;
+	  height: 108px; width: 200px;
+	  position: absolute; top: 40px; left: 300px;
+	  }
+	  .bottombarColRight
+	  {
+      text-align: left;
+	  height: 108px; width: 200px;
+	  position: absolute; top: 40px; right: 160px;
+	  }
+
+/* The very bottom copyright info, but now setup inside bottom bar! */
+      .copyright
+      {
+      font-size: 11pt;
+      position: absolute; bottom: 4px; left: 4px;
+      }
+
+/* bottom aligned, full length orange stripe for footer stuff */
+ .bottombar
+{
+background: #fb9411; /*url('../images/backBot2.jpg'); */
+width: 100%; height: 133px;
+position: absolute; bottom: -34px; left: -8px;
+text-align: center;
+}
+
+
+/* Used just like an hr tag, but more robust.  I use it in leftbar */
+.hr
+{
+	border-top: 1px #ececec solid;
+	hieght: 1px; width: 100%;
+}
+
+/* Navbar buttons */
+ul.nav  
+{
+list-style: none;
+padding: 0;
+margin: 0 0 0 0;
+width: 900px
+}
+
+ul.nav li
+{
+display: inline;
+}
+
+ul.nav li a
+{
+text-align: center;
+background: transparent;
+color: #ffffff;
+border-right: 1px #ffe1bb solid;
+float: left;
+width: 59px;
+padding: 5px 20px;
+text-decoration: none;
+font-weight: none;
+font-size: 12pt;
+}
+ul.nav li a:hover {background: #ffe1bb; color: #000000;}
+
+/* expanded nav buttons */
+ul.navSub
+{
+list-style: none;
+padding: 0;
+margin: 0 0 0 0;
+width: 900px
+}
+
+ul.navSub li
+{
+display: table;
+}
+
+ul.navSub li a
+{
+text-align: center;
+background: transparent;
+border-top: 1px #ffffff solid;
+color: #ffffff;
+float: left;
+width: 59px;
+padding: 5px 20px;
+text-decoration: none;
+font-weight: none;
+font-size: 12pt;
+}
+ul.navSub li a:hover {background: #ffe1bb; color: #000000;}
+   
+img.colHead
+{
+	position: absolute; top: 0px; left: 0px;
+}
+
+p.colContent
+{
+	position: relative; top: 220px; left: 10px;
+	width: 280px;
+}

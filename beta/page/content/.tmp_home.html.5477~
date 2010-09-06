@@ -1,0 +1,44 @@
+         <h1>Todo:</h1>
+	     <p>Make the javascript scroller more like steam: keep track of location so no jumps, stick to centered pic no in between</p>
+   	     <p>Leftbar background?  My last one was ugly</p>
+	     <p>Make the background fade more.</p>
+	     <p>Create a public aiesec calendar, for only recruiting type events</p>
+	     <p>Swap Exchange/Partners icons</p>
+	     <p>Abstract more stuff to server side includes</p>
+		 <p>Find a php global thingy that gives you http://www.aiesecmichigan.com (for the ssincludes content function)</p>
+		 <p>Fix login cookie....</p>
+		 <p>Get other pages up</p>
+		 <p>Add content!</p>
+	     <font style = "font-size: 16pt;">AIESEC Michigan</font>
+	     is dreaming big.  We create life changing experiences for every student we send abroad.  We
+	     provide endless opportunities and experience to our members.  And we bring some of the best
+	     international talent to businesses right here in Michigan.  Intersetlingly enough, we are
+	     only one of over 800 Local Communities around the world doing the same.
+	     <br><br>
+	     <font style = "font-size: 16pt;">AIESEC Michigan</font>
+	     creates life-changing experiences.  From the students we send abroad every year, to the
+	     interns we bring to Michigan to work with local companies, to our own student members 
+	     making everything happen, we are creating change both at home and abroad.
+	     Interestingly enough, we are only one of over 800 Local Communities around the world
+	     working to do the same.
+         <h1>So, What is AIESEC?</h1>
+         <p>
+         In over 1700 universities in 107 countries and territories, AIESEC is a global, non-political,
+         independent, not-for-profit organization run by students and recent graduates of institutions
+         of higher education.  Our international platform enables young people to explore and develop 
+         their leadership potential for them to have a positive impact in society.
+         </p>
+         <p>
+         AIESEC provides its members with an integrated development experience comprised of leadership 
+         opportunities, international internships, and participation in a global learning environment.   
+         </p>
+         <h1>Another Paragraph?</h1>
+         <p>
+         That\'s right, with AIESEC you get an butt load of text right on the homepage.  You can read read
+         the black and white goodness that is information all day without even having to click a link.
+         </p>
+         <p>
+         That\'s because AIESEC Michigan needs to have enough text here to keep the entire left bar visible.
+         Or, I could just set a minimum height for this div.  I\'m actually going to go do that right now.   
+         </p>
+         <br><br>
