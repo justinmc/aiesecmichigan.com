@@ -44,12 +44,18 @@ function content($filename)
 		include ($_SERVER["DOCUMENT_ROOT"] . '/beta/page/content/calendar.html');
     elseif ($filename == "http://www.aiesecmichigan.com/beta/join.php")
 		include ($_SERVER["DOCUMENT_ROOT"] . '/beta/page/content/join.html');
-	elseif ($filename == "http://www.aiesecmichigan.com/beta/contact.php")
-		include ($_SERVER["DOCUMENT_ROOT"] . '/beta/page/content/contact.html');
-    elseif ($filename == "http://www.aiesecmichigan.com/beta/about.php")
-		include ($_SERVER["DOCUMENT_ROOT"] . '/beta/page/content/about.html');
+	elseif ($filename == "http://www.aiesecmichigan.com/beta/joinlc.php")
+		include ($_SERVER["DOCUMENT_ROOT"] . '/beta/page/content/joinlc.html');
+	elseif ($filename == "http://www.aiesecmichigan.com/beta/joinep.php")
+		include ($_SERVER["DOCUMENT_ROOT"] . '/beta/page/content/joinep.html');
 	elseif ($filename == "http://www.aiesecmichigan.com/beta/joingoabroad.php")
 		include ($_SERVER["DOCUMENT_ROOT"] . '/beta/page/content/joingoabroad.html');
+	elseif ($filename == "http://www.aiesecmichigan.com/beta/contact.php")
+		include ($_SERVER["DOCUMENT_ROOT"] . '/beta/page/content/contact.html');
+	elseif ($filename == "http://www.aiesecmichigan.com/beta/businesses.php")
+		include ($_SERVER["DOCUMENT_ROOT"] . '/beta/page/content/businesses.html');
+    elseif ($filename == "http://www.aiesecmichigan.com/beta/about.php")
+		include ($_SERVER["DOCUMENT_ROOT"] . '/beta/page/content/about.html');
 	elseif ($filename == "http://www.aiesecmichigan.com/beta/intern.php")
 		include ($_SERVER["DOCUMENT_ROOT"] . '/beta/page/content/intern.html');
     else

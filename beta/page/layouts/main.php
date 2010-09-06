@@ -75,30 +75,54 @@ $authenticated = 0; //authenticate($identifier);
          <ul class = "nav">
          <li onmouseover = "expandMenu('subMenu1')" onmouseout = "expandMenu('subMenu1')"><a href = "index.php">Home</a></li>
          <li onmouseover = "expandMenu('subMenu2')" onmouseout = "expandMenu('subMenu2')"><a href = "join.php">Join</a></li>
-         <li><a href = "intern.php">Intern</a></li>
-         <li><a href = "index.php">Businesses</a></li>
-         <li><a href = "index.php">Alumni</a></li>
-         <li><a href = "index.php">Members</a></li>
-         <li><a href = "about.php">About</a></li>
-         <li><a href = "contact.php">Contact</a></li>
+         <li onmouseover = "expandMenu('subMenu3')" onmouseout = "expandMenu('subMenu3')"><a href = "intern.php">Interns</a></li>
+         <li onmouseover = "expandMenu('subMenu4')" onmouseout = "expandMenu('subMenu4')"><a href = "businesses.php">Businesses</a></li>
+         <li onmouseover = "expandMenu('subMenu5')" onmouseout = "expandMenu('subMenu5')"><a href = "alumni.php">Alumni</a></li>
+         <li onmouseover = "expandMenu('subMenu6')" onmouseout = "expandMenu('subMenu6')"><a href = "about.php">About</a></li>
+         <li onmouseover = "expandMenu('subMenu7')" onmouseout = "expandMenu('subMenu7')"><a href = "contact.php">Contact</a></li>
+         <li onmouseover = "expandMenu('subMenu8')" onmouseout = "expandMenu('subMenu8')"><a href = "members.php">Members</a></li>
          </ul>
       </div>
       <div class = "navMenu">
          <ul id = "subMenu1" class = "navSub" onmouseover = "expandMenu('subMenu1')" onmouseout = "expandMenu('subMenu1')">
-         <li><a href = "index.php">hello</a></li>
-         <li><a href = "index.php">goodbye</a></li>
+         <li><a href = "index.php">Option1</a></li>
+         <li><a href = "index.php">Option2</a></li>
          </ul>
          <ul id = "subMenu2" class = "navSub" onmouseover = "expandMenu('subMenu2')" onmouseout = "expandMenu('subMenu2')">
          <li><a href = "joinlc.php">Joining as a Member</a></li>
          <li><a href = "joinep.php">Joining as an Exchange Participant</a></li>
          <li><a href = "joingoabroad.php">Going Abroad</a></li>
          </ul>
+         <ul id = "subMenu3" class = "navSub" onmouseover = "expandMenu('subMenu3')" onmouseout = "expandMenu('subMenu3')">
+         <li><a href = "index.php">Option1</a></li>
+         <li><a href = "index.php">Option2</a></li>
+         </ul>
+         <ul id = "subMenu4" class = "navSub" onmouseover = "expandMenu('subMenu4')" onmouseout = "expandMenu('subMenu4')">
+         <li><a href = "index.php">Option1</a></li>
+         <li><a href = "index.php">Option2</a></li>
+         </ul>
+         <ul id = "subMenu5" class = "navSub" onmouseover = "expandMenu('subMenu5')" onmouseout = "expandMenu('subMenu5')">
+         <li><a href = "index.php">Option1</a></li>
+         <li><a href = "index.php">Option2</a></li>
+         </ul>
+         <ul id = "subMenu6" class = "navSub" onmouseover = "expandMenu('subMenu6')" onmouseout = "expandMenu('subMenu6')">
+         <li><a href = "index.php">Option1</a></li>
+         <li><a href = "index.php">Option2</a></li>
+         </ul>
+         <ul id = "subMenu7" class = "navSub" onmouseover = "expandMenu('subMenu7')" onmouseout = "expandMenu('subMenu7')">
+         <li><a href = "index.php">Option1</a></li>
+         <li><a href = "index.php">Option2</a></li>
+         </ul>
+         <ul id = "subMenu8" class = "navSub" onmouseover = "expandMenu('subMenu8')" onmouseout = "expandMenu('subMenu8')">
+         <li><a href = "index.php">Option1</a></li>
+         <li><a href = "index.php">Option2</a></li>
+         </ul>
       </div>
       <div class = "scrollerButtonL">
-         <a href = "#" onclick = "pageScrollBack()">Left!</a>
+         <a href = "#" onclick = "pageScrollBack()"><img src = "public/images/arrowLeft.png" border = "0"></a>
       </div>
       <div class = "scrollerButtonR">
-         <a href = "#" onclick = "pageScroll()">Right!</a>
+         <a href = "#" onclick = "pageScroll()"><img src = "public/images/arrowRight.png" border = "0"></a>
       </div>
       <div class = "scroller" id = "scrollMe"><img src = "public/images/banner0.jpg"><img src = "public/images/banner1.jpg"><img src = "public/images/banner2.jpg"></div>
       <div class = "topBar"></div>
@@ -176,7 +200,7 @@ curl_close($ch);
       ?>
       <br><br><br><br>
       <div class = "bottombarContent">
-         <img src = "public/images/bottom.jpg" alt = "">
+         <img src = "public/images/barBottom.png" alt = "">
          <div class = "bottombarColLeft">
             <b>AIESEC</b><br>
             <a class = "darkBG" target = "_blank" href = "http://www.aiesec.org">aiesec.org</a><br>
