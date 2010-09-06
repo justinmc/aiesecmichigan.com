@@ -69,13 +69,13 @@ $authenticated = 0; //authenticate($identifier);
 <div class = "wrapper">
    <div class = "all">
       <div class = "titlebar">
-      <a href = "http://www.aiesecmichigan.com/beta/index.php"><img class = "title" border = "0" src = "public/images/title4.png"></a>
+      <a href = "index.php"><img class = "title" border = "0" src = "public/images/title4.png"></a>
       </div>
       <div class = "navbar">
          <ul class = "nav">
          <li onmouseover = "expandMenu('subMenu1')" onmouseout = "expandMenu('subMenu1')"><a href = "index.php">Home</a></li>
          <li onmouseover = "expandMenu('subMenu2')" onmouseout = "expandMenu('subMenu2')"><a href = "join.php">Join</a></li>
-         <li><a href = "index.php">Intern</a></li>
+         <li><a href = "intern.php">Intern</a></li>
          <li><a href = "index.php">Businesses</a></li>
          <li><a href = "index.php">Alumni</a></li>
          <li><a href = "index.php">Members</a></li>
@@ -94,7 +94,13 @@ $authenticated = 0; //authenticate($identifier);
          <li><a href = "joingoabroad.php">Going Abroad</a></li>
          </ul>
       </div>
-      <div class = "banner" id = "scrollMe"><img src = "public/images/banner0.jpg"><img src = "public/images/banner1.jpg"><img src = "public/images/banner2.jpg"></div>
+      <div class = "scrollerButtonL">
+         <a href = "#" onclick = "pageScrollBack()">Left!</a>
+      </div>
+      <div class = "scrollerButtonR">
+         <a href = "#" onclick = "pageScroll()">Right!</a>
+      </div>
+      <div class = "scroller" id = "scrollMe"><img src = "public/images/banner0.jpg"><img src = "public/images/banner1.jpg"><img src = "public/images/banner2.jpg"></div>
       <div class = "topBar"></div>
       <div class = "leftbar">
          <br><br><br><br><br><br><br>

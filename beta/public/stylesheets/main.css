@@ -159,16 +159,34 @@ overflow: hidden;
 		visibility: hidden;
 		overflow: hidden;
 	  }
-   
-/* Holds the friendly random image in the center banner (not random yet...) */
-   .banner
+
+/* Holds the left/right scroll butttons now that I removed the scroll bar */
+   .scrollerButtonL
+   {
+  	position: absolute; top: 320px; left: 0px;
+	height: 32px; width: 64px;
+	background: transparent;
+	border: 1px white solid;
+	z-index: 2;
+   }
+   .scrollerButtonR
+   {
+  	position: absolute; top: 320px; left: 830px;
+	height: 32px; width: 64px;
+	background: transparent;
+	border: 1px white solid;
+	z-index: 2;
+   }
+
+/* Holds the cool scrolly image in the center */
+   .scroller
    {
    	background: #ffffff;
 	position: relative; top: 4px; left: 0px;
 	height: 242px; width: inherit;
 	z-index: 1;
 	white-space: nowrap;
-	overflow: auto;
+	overflow: hidden;
     overflow-y: hidden;
    }
 

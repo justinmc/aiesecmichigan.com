@@ -50,7 +50,9 @@ function content($filename)
 		include ($_SERVER["DOCUMENT_ROOT"] . '/beta/page/content/about.html');
 	elseif ($filename == "http://www.aiesecmichigan.com/beta/joingoabroad.php")
 		include ($_SERVER["DOCUMENT_ROOT"] . '/beta/page/content/joingoabroad.html');
-	else
+	elseif ($filename == "http://www.aiesecmichigan.com/beta/intern.php")
+		include ($_SERVER["DOCUMENT_ROOT"] . '/beta/page/content/intern.html');
+    else
 	{
 		echo 'Sorry!  The page you\'re trying to access does not exist.' . "<br>\n";
 		echo '|' . $filename . "|<br>\n";
