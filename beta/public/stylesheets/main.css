@@ -12,7 +12,7 @@ a:hover {color: #b7baaf; text-decoration: none;}
 
 body
 { 
-background: #ffffff;
+background: #fffcf7;
 font-size: 13pt;
 text-align: center;
 height: 100%;
@@ -87,7 +87,7 @@ text-align: left;
 	background-image: url('../images/backTop.jpg');
     position: absolute; top: 32px; left: 50%;
 	margin-left: -700px; /* this should be half the width of the div - tricky centering hack */
-	height: 800px; width: 1400px;
+	height: 586px; width: 1400px;
 	z-index: 0;
 }
 
@@ -267,7 +267,7 @@ overflow: hidden;
    border: 0px red solid;
    text-align: left;
    height: auto; width: 614px;
-   min-height: 1400px;
+   min-height: 1200px;
    position: relative; top: 0px; left: 264px;
    padding: 10px;
    }

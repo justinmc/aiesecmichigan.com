@@ -84,15 +84,18 @@ $authenticated = 0; //authenticate($identifier);
          </ul>
       </div>
       <div class = "navMenu">
+<!-- 
          <ul id = "subMenu1" class = "navSub" onmouseover = "expandMenu('subMenu1')" onmouseout = "expandMenu('subMenu1')">
          <li><a href = "index.php">Option1</a></li>
          <li><a href = "index.php">Option2</a></li>
          </ul>
+ -->
          <ul id = "subMenu2" class = "navSub" onmouseover = "expandMenu('subMenu2')" onmouseout = "expandMenu('subMenu2')">
          <li><a href = "joinlc.php">Joining as a Member</a></li>
          <li><a href = "joinep.php">Joining as an Exchange Participant</a></li>
          <li><a href = "joingoabroad.php">Going Abroad</a></li>
          </ul>
+<!-- 
          <ul id = "subMenu3" class = "navSub" onmouseover = "expandMenu('subMenu3')" onmouseout = "expandMenu('subMenu3')">
          <li><a href = "index.php">Option1</a></li>
          <li><a href = "index.php">Option2</a></li>
@@ -117,6 +120,7 @@ $authenticated = 0; //authenticate($identifier);
          <li><a href = "index.php">Option1</a></li>
          <li><a href = "index.php">Option2</a></li>
          </ul>
+ -->
       </div>
       <div class = "scrollerButtonL">
          <a href = "#" onclick = "pageScrollBack()"><img src = "public/images/arrowLeft.png" border = "0"></a>
@@ -124,10 +128,10 @@ $authenticated = 0; //authenticate($identifier);
       <div class = "scrollerButtonR">
          <a href = "#" onclick = "pageScroll()"><img src = "public/images/arrowRight.png" border = "0"></a>
       </div>
-      <div class = "scroller" id = "scrollMe"><img src = "public/images/banner0.jpg"><img src = "public/images/banner1.jpg"><img src = "public/images/banner2.jpg"></div>
+      <div class = "scroller" id = "scrollMe"><img src = "public/images/banner0.jpg"><img src = "public/images/banner1.jpg"><img src = "public/images/banner2.jpg"><img src = "public/images/banner3.jpg"><img src = "public/images/banner4.jpg"></div>
       <div class = "topBar"></div>
       <div class = "leftbar">
-         <br><br><br><br><br><br><br>
+         <br><br><br><br><br>
          <h2>Announcements</h2>
          <?php 
                   
@@ -135,7 +139,7 @@ $authenticated = 0; //authenticate($identifier);
            
          ?>
          <p>
-         AIESEC Michigan is getting ready for fall recruitment 2010!  We will be posting our application in
+         AIESEC Michigan is getting ready for fall recruitment 2010!  We will be posting our application later in
          September, so keep an eye on this spot for when it becomes available.
          </p>
          <div class = "hr"></div>
@@ -149,7 +153,7 @@ $authenticated = 0; //authenticate($identifier);
          Hey guys Stephanie here, waiting in Minneapolis airport for my flight to Tokyo! It's going to be a 
          long 48 hours. My flight schedule goes like this... Detroit--&gt; Minneapolis--&gt; Tokyo--&gt; Shanghai--&gt; Changchun. 
          It's a blessing that I have a friend in Shanghai who will let me stay there for a night, or else I wouldn't be 
-         able to make it!
+         able to make it!...
          </p>
          <a href = "">Read more at the AIESEC Michigan Abroad blog</a>
          <br><br>
@@ -159,8 +163,8 @@ $authenticated = 0; //authenticate($identifier);
 
 // blog rss feed: http://aiesecmichigan.blogspot.com/feeds/posts/default?alt=rss
 
-$feed = file_get_contents('http://aiesecmichigan.blogspot.com/feeds/posts/default?alt=rss');
-echo '<br>|' . $feed . '|<br>';
+//$feed = file_get_contents('http://aiesecmichigan.blogspot.com/feeds/posts/default?alt=rss');
+//echo '<br>|' . $feed . '|<br>';
 
 /*
 $ch = curl_init('http://aiesecmichigan.blogspot.com/feeds/posts/default?alt=rss');

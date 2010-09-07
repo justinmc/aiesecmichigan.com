@@ -53,12 +53,16 @@ function content($filename)
 	elseif ($filename == "http://www.aiesecmichigan.com/beta/contact.php")
 		include ($_SERVER["DOCUMENT_ROOT"] . '/beta/page/content/contact.html');
 	elseif ($filename == "http://www.aiesecmichigan.com/beta/businesses.php")
-		include ($_SERVER["DOCUMENT_ROOT"] . '/beta/page/content/businesses.html');
+		include ($_SERVER["DOCUMENT_ROOT"] . '/beta/page/content/comingsoon.html');
     elseif ($filename == "http://www.aiesecmichigan.com/beta/about.php")
 		include ($_SERVER["DOCUMENT_ROOT"] . '/beta/page/content/about.html');
 	elseif ($filename == "http://www.aiesecmichigan.com/beta/intern.php")
-		include ($_SERVER["DOCUMENT_ROOT"] . '/beta/page/content/intern.html');
-    else
+		include ($_SERVER["DOCUMENT_ROOT"] . '/beta/page/content/comingsoon.html');
+	elseif ($filename == "http://www.aiesecmichigan.com/beta/alumni.php")
+		include ($_SERVER["DOCUMENT_ROOT"] . '/beta/page/content/comingsoon.html');
+	elseif ($filename == "http://www.aiesecmichigan.com/beta/members.php")
+		include ($_SERVER["DOCUMENT_ROOT"] . '/beta/page/content/comingsoon.html');
+	else
 	{
 		echo 'Sorry!  The page you\'re trying to access does not exist.' . "<br>\n";
 		echo '|' . $filename . "|<br>\n";
