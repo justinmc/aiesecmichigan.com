@@ -139,10 +139,10 @@ $authenticated = 0; //authenticate($identifier);
            
          ?>
          <p>
-         Info session dates are set!  They will be held September 13th, 15th, 16th, and 17th at 7:00pm.  Locations
-         are yet to be determined, check the
+         Info session dates are set!  They will be held September 13th, 14th, and 16th, at 7:00pm in 
+         3401 Mason Hall, and September 17th at 5:00pm in 3411 Mason Hall.  Check the 
          <a href = "calendar.php">calendar</a>
-         for more info.  Applications will also be released shortly.
+         for more info, and keep an eye out for applications being released shortly.
          </p>
          <div class = "hr"></div>
          <br>
@@ -219,10 +219,9 @@ curl_close($ch);
          </div>
          <div class = "bottombarColRight">
             <b>Contact</b><br>
-            <a class = "darkBG" href = "">aiesecmichigan@gmail.com</a><br>
-            President:<a class = "darkBG" href = "">dmouli@umich.edu</a><br>
-            Webmasters:<a class = "darkBG" href = "">mcjustin@umich.edu</a><br>
-            <font style = "color: #fb9411;">Webmasters:</font><a class = "darkBG" href = "">ashwinch@gmail.com</a><br>
+            President:<a class = "darkBG" href = "mailto: michigan-president@aiesecus.org">michigan-president@aiesecus.org</a><br>
+            Webmasters:<a class = "darkBG" href = "mailto: mcjustin@umich.edu">mcjustin@umich.edu</a><br>
+            <font style = "color: #fb9411;">Webmasters:</font><a class = "darkBG" href = "mailto: ashwinch@gmail.com">ashwinch@gmail.com</a><br>
          </div>
          <div class = "copyright">
             Copyright &copy; 2010 AIESEC at the University of Michigan
