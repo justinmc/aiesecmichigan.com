@@ -404,7 +404,7 @@ ul.nav
 list-style: none;
 padding: 0;
 margin: 0 0 0 0;
-width: 900px
+width: 904px
 }
 
 ul.nav li
@@ -419,7 +419,7 @@ background: transparent;
 color: #ffffff;
 border-right: 1px #ffe1bb solid;
 float: left;
-width: 71.5px;
+width: 72px;
 padding: 5px 20px;
 text-decoration: none;
 font-weight: none;

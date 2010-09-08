@@ -128,7 +128,7 @@ $authenticated = 0; //authenticate($identifier);
       <div class = "scrollerButtonR">
          <a href = "#" onclick = "pageScroll()"><img src = "public/images/arrowRight.png" border = "0"></a>
       </div>
-      <div class = "scroller" id = "scrollMe"><img src = "public/images/banner0.jpg"><img src = "public/images/banner1.jpg"><img src = "public/images/banner2.jpg"><img src = "public/images/banner3.jpg"><img src = "public/images/banner4.jpg"></div>
+      <div class = "scroller" id = "scrollMe"><!--  <img src = "public/images/banner0.jpg"><img src = "public/images/banner1.jpg"> --> <img src = "public/images/banner4.jpg"><img src = "public/images/banner2.jpg"><img src = "public/images/banner3.jpg"></div>
       <div class = "topBar"></div>
       <div class = "leftbar">
          <br><br><br><br><br>
