@@ -11,6 +11,11 @@
 
 <!-- CSS link -->
 <link rel = stylesheet type = "text/css" href = "public/stylesheets/main.css">
+<!--[if IE]>
+<link rel = stylesheet type = "text/css" href = "public/stylesheets/mainie.css">
+<![EndIf]-->
+
+
 <!-- JavaScript link -->
 <script type="text/javascript" src="public/javascripts/sideScroller.js"></script>
 <script type="text/javascript" src="public/javascripts/navMenu.js"></script>
@@ -131,7 +136,6 @@ $authenticated = 0; //authenticate($identifier);
       <div class = "scroller" id = "scrollMe"><!--  <img src = "public/images/banner0.jpg"><img src = "public/images/banner1.jpg"> --> <img src = "public/images/banner4.jpg"><img src = "public/images/banner2.jpg"><img src = "public/images/banner3.jpg"></div>
       <div class = "topBar"></div>
       <div class = "leftbar">
-         <br><br><br><br><br>
          <h2>Announcements</h2>
          <?php 
                   
@@ -148,6 +152,7 @@ $authenticated = 0; //authenticate($identifier);
          <br>
          <a href = "calendar.php" style = "float: right;">View Calendar</a>
          <iframe src="http://www.google.com/calendar/embed?title=Events&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=400&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=obmgqmj8k4kqfenkv7enp0vln4%40group.calendar.google.com&amp;color=%23A32929&amp;ctz=America%2FNew_York" style=" border-width:0 " width="240" height="400" frameborder="0" scrolling="no"></iframe>
+         <br>
          <div class = "hr"></div>
          <h2>Blog</h2>
          Hello!<br>

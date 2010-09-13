@@ -67,7 +67,7 @@ text-align: left;
    {
    	   background-image: url('../images/bannerTopRight.jpg');
 	   position: absolute; top: 0px; right: 0px;
-	   height: inherit; width: 224px;
+	   height: 32px; width: 224px;
    }
 
 /* Holds the content in banner (login stuff for now, top left) */
@@ -265,9 +265,8 @@ overflow: hidden;
    {
    border: 0px red solid;
    text-align: left;
-   height: auto; width: 614px;
-   min-height: 1200px;
-   position: relative; top: 0px; left: 264px;
+   height: 1100px; width: 614px;
+   position: relative; top: 0px; left: 110px;
    padding: 10px;
    }
 
@@ -348,7 +347,7 @@ overflow: hidden;
    color: #ffffff;
    height: 170px; width: 900px;
    position: absolute; bottom: 0px; left: 0px;
-   z-index: 1;
+   z-index: 2;
    }
 
 /* Columns for the cool bottom links */
@@ -383,7 +382,7 @@ overflow: hidden;
 /* bottom aligned, full length orange stripe for footer stuff */
  .bottombar
 {
-background: #fb9411; /*url('../images/backBot2.jpg'); */
+background: transparent; /* #fb9411 url('../images/backBot2.jpg'); */
 width: 100%; height: 133px;
 position: absolute; bottom: -34px; left: -8px;
 text-align: center;
@@ -418,7 +417,7 @@ background: transparent;
 color: #ffffff;
 border-right: 1px #ffe1bb solid;
 float: left;
-width: 72px;
+width: 113px;
 padding: 5px 20px;
 text-decoration: none;
 font-weight: none;
@@ -462,6 +461,6 @@ img.colHead
 
 p.colContent
 {
-	position: relative; top: 220px; left: 10px;
+	position: relative; top: 234px; left: 10px;
 	width: 280px;
 }
