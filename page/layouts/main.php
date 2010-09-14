@@ -143,10 +143,12 @@ $authenticated = 0; //authenticate($identifier);
            
          ?>
          <p>
-         Info session dates are set!  They will be held September 13th, 14th, and 16th, at 7:00pm in 
-         3401 Mason Hall, and September 17th at 5:00pm in 3411 Mason Hall.  Check the 
+         Info sessions are happening this week!  They will be held September 13th, 14th, and 16th, at 7:00pm in 
+         3401 Mason Hall, and September 17th at 7:00pm in 3411 Mason Hall.  Check the 
          <a href = "calendar.php">calendar</a>
-         for more info, and keep an eye out for applications being released shortly.
+         for more info.  Our application is also now available, you can download it and apply on the 
+         <a href = "join.php">Join</a>
+         page.  Remember that the app is due by Wednesday, September 29th at 11:59pm!
          </p>
          <div class = "hr"></div>
          <br>
@@ -162,7 +164,7 @@ $authenticated = 0; //authenticate($identifier);
          It's a blessing that I have a friend in Shanghai who will let me stay there for a night, or else I wouldn't be 
          able to make it!...
          </p>
-         <a href = "">Read more at the AIESEC Michigan Abroad blog</a>
+         <a href = "http://aiesecmichigan.blogspot.com" target = "_blank">Read more at the AIESEC Michigan Abroad blog</a>
          <br><br>
          <div class = "hr"></div>
 
