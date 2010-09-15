@@ -148,7 +148,7 @@ $authenticated = 0; //authenticate($identifier);
          <a href = "calendar.php">calendar</a>
          for more info.  Our application is also now available, you can download it and apply on the 
          <a href = "join.php">Join</a>
-         page.  Remember that the app is due by Wednesday, September 29th at 11:59pm!
+         page.  Remember that the app is due by Wednesday, September 22nd at 11:59pm!
          </p>
          <div class = "hr"></div>
          <br>
