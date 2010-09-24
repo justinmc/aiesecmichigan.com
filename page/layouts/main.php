@@ -158,7 +158,7 @@ $authenticated = 0; //authenticate($identifier);
            
          ?>
          <p>
-         Our fall recruitment is now closed, thanks to everyone who submitted an application!  We'll
+         Our fall recruitment is now closed, thank you to everyone who submitted an application!  We'll
          be holding interviews this Sunday, so stay tuned.  To anyone who missed the deadline, we'll
          be recruiting again in October, check the  
          <a href = "calendar.php">calendar</a>
