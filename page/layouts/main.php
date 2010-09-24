@@ -158,12 +158,11 @@ $authenticated = 0; //authenticate($identifier);
            
          ?>
          <p>
-         Info sessions are happening this week!  They will be held September 13th, 14th, and 16th, at 7:00pm in 
-         3401 Mason Hall, and September 17th at 7:00pm in 3411 Mason Hall.  Check the 
+         Our fall recruitment is now closed, thanks to everyone who submitted an application!  We'll
+         be holding interviews this Sunday, so stay tuned.  To anyone who missed the deadline, we'll
+         be recruiting again in October, check the  
          <a href = "calendar.php">calendar</a>
-         for more info.  Our application is also now available, you can download it and apply on the 
-         <a href = "join.php">Join</a>
-         page.  Remember that the app is due by Wednesday, September 22nd at 11:59pm!
+         for more info.
          </p>
          <div class = "hr"></div>
          <br>
