@@ -36,7 +36,7 @@ function announcement()
            return;
 }
 
-function content($filename)
+function content($filename, $authenticated)
 {
 	if ($filename == "http://www.aiesecmichigan.com/index.php")
 		include ($_SERVER["DOCUMENT_ROOT"] . '/page/content/home.html');
@@ -62,6 +62,13 @@ function content($filename)
 		include ($_SERVER["DOCUMENT_ROOT"] . '/page/content/comingsoon.html');
 	elseif ($filename == "http://www.aiesecmichigan.com/members.php")
 		include ($_SERVER["DOCUMENT_ROOT"] . '/page/content/comingsoon.html');
+    elseif ($filename == "http://www.aiesecmichigan.com/mdirectory.php")
+    {
+    	if ($authenticated)
+		   include ($_SERVER["DOCUMENT_ROOT"] . '/page/content/mdirectory.html');
+		else
+		   include ($_SERVER["DOCUMENT_ROOT"] . '/page/content/accessdenied.html');
+    }
 	else
 	{
 		echo 'Sorry!  The page you\'re trying to access does not exist.' . "<br>\n";
@@ -79,7 +86,7 @@ function bottomInfo($filename)
 		echo '
 	  <div class = "bottomInfo">
          <div class = "colLeft">
-      	    <a href = "joinlc.php"><img class = "colHead" src = "public/images/students.jpg" border = "0"></a>
+      	    <a href = "joinlc.php"><img class = "colHead" src = "public/images/infoStudents.jpg" border = "0"></a>
 			<p class = "colContent">
 			Want to see how you might fit in with one of the most fun and ambitious groups on the Michigan campus?  If you\'re
 			looking to get involved with a passionate organization, network with people all over the world, and (of course) go 
@@ -87,10 +94,10 @@ function bottomInfo($filename)
 			chapters in the US, AIESEC Michigan is not a bad place to start.
 			</p>
 			<br><br><br>
-		    <div class = "colLeftBot"><a class = "darkBG" href = "joinlc.php"><br>> Find out more</a></div>
+		    <div class = "colLeftBot"><a class = "darkBG" href = "joinlc.php">> Find out more</a></div>
          </div>
 	     <div class = "colMid">
-      	    <a href = "joinep.php"><img class = "colHead" src = "public/images/eps.jpg" border = "0"></a>
+      	    <a href = "joinep.php"><img class = "colHead" src = "public/images/infoEps.jpg" border = "0"></a>
 			<p class = "colContent">
 			Want to go abroad, but don\'t have the time to join our organization?  Not a problem, just sign up as an Exchange Participant.
 			AIESEC Michigan can send you on one of the hundreds of internships on the AIESEC database to any
@@ -99,16 +106,16 @@ function bottomInfo($filename)
 	   		new home away from home.  Apply now!  
    			</p>
 			   <br><br><br>
-		    <div class = "colMidBot"><a class = "darkBG" href = "joinep.php"><br>> Find out more</a></div>
+		    <div class = "colMidBot"><a class = "darkBG" href = "joinep.php">> Find out more</a></div>
          </div>
 	     <div class = "colRight">
-            <a href = "businesses.php"><img class = "colHead" src = "public/images/partners.jpg" border = "0"></a>
+            <a href = "businesses.php"><img class = "colHead" src = "public/images/infoPartners.jpg" border = "0"></a>
 			<p class = "colContent">
 			Looking to expand into the international market place?  AIESEC Michigan can provide you with the best and brightest
    			interns from anywhere in our network of over 100 countries.
    			</p>
 			   <br><br><br>
-		    <div class = "colRightBot"><a class = "darkBG" href = "businesses.php"><br>> Find out more</a></div>
+		    <div class = "colRightBot"><a class = "darkBG" href = "businesses.php">> Find out more</a></div>
          </div>
       </div>';
 	}

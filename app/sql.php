@@ -3,7 +3,7 @@
 /* This file talks directly with the sql database */
 
 
-$server = 'aiesecmi.ipowermysql.com';
+$server = 'localhost'; //'aiesecmi.ipowermysql.com';
 $username = 'aiesecmi';
 $password = 'wolverine.2';
 $db = "justin";
@@ -12,14 +12,13 @@ $table = "users";
 // Accesses the database, returns an array of a given row
 function getDB ($row)
 {  global $server, $username, $password, $db, $table;
-
    $con = mysql_connect($server, $username, $password);
    if (!$con)
       die('getdb could not connect: ' . mysql_error());
-      
+
    mysql_select_db($db);
    
-   $QUERY = mysql_query("SELECT * FROM `$table` WHERE `index` = $row"); // $row
+   $QUERY = mysql_query("SELECT * FROM `$table` WHERE `index` = $row");
    $DATA = mysql_fetch_array($QUERY);
 
    mysql_close($con);

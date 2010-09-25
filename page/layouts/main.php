@@ -36,8 +36,8 @@ if ($identifier)
   setcookie("identifier", $_REQUEST["identifier"], time()+108000 , '/');
 else
   $identifier = $_COOKIE["identifier"];
-  
-$authenticated = 0; //authenticate($identifier);
+
+$authenticated = authenticate($identifier);
 
 ?>
 
@@ -100,7 +100,14 @@ $authenticated = 0; //authenticate($identifier);
          <li onmouseover = "expandMenu('subMenu5')" onmouseout = "expandMenu('subMenu5')"><a href = "alumni.php">Alumni</a></li>
          <li onmouseover = "expandMenu('subMenu6')" onmouseout = "expandMenu('subMenu6')"><a href = "about.php">About</a></li>
          <li onmouseover = "expandMenu('subMenu7')" onmouseout = "expandMenu('subMenu7')"><a href = "contact.php">Contact</a></li>
-         <li onmouseover = "expandMenu('subMenu8')" onmouseout = "expandMenu('subMenu8')"><a href = "members.php">Members</a></li>
+         <?php 
+         
+         if ($authenticated)
+            echo '<li onmouseover = "expandMenu(\'subMenu8\')" onmouseout = "expandMenu(\'subMenu8\')"><a href = "members.php">Members</a></li>';
+         else
+            echo '<li><a class="rpxnow" onclick="return false;" href="https://aiesecmichigan.rpxnow.com/openid/v2/signin?token_url=http%3A%2F%2Faiesecmichigan.com%2Fapp%2Frpx.php?return=' . $filename . '"> Members </a></li>';
+         
+         ?>
          </ul>
       </div>
       <div class = "navMenu">
@@ -136,11 +143,10 @@ $authenticated = 0; //authenticate($identifier);
          <li><a href = "index.php">Option1</a></li>
          <li><a href = "index.php">Option2</a></li>
          </ul>
+-->
          <ul id = "subMenu8" class = "navSub" onmouseover = "expandMenu('subMenu8')" onmouseout = "expandMenu('subMenu8')">
-         <li><a href = "index.php">Option1</a></li>
-         <li><a href = "index.php">Option2</a></li>
+         <li><a href = "mdirectory.php">Directory</a></li>
          </ul>
- -->
       </div>
       <div class = "scrollerButtonL">
          <a href = "#" onclick = "pageScrollBack()"><img src = "public/images/arrowLeft.png" border = "0"></a>
@@ -215,16 +221,16 @@ curl_close($ch);
       <div class = "content">
          <?php 
          
-         content($filename);
+         content($filename, $authenticated);
          
          ?>
-         <br><br><br><br><br>
-      </div>
-      <?php 
+               <?php 
       
       bottomInfo($filename);
       
       ?>
+         <br><br><br><br><br>
+      </div>
       <br><br><br><br>
       <div class = "bottombarContent">
          <img src = "public/images/barBottom.png" alt = "">
