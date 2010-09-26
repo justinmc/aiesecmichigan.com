@@ -29,11 +29,11 @@
 
 include $_SERVER["DOCUMENT_ROOT"] . '/app/authentication.php';
 include $_SERVER["DOCUMENT_ROOT"] . '/app/io.php';
-include $_SERVER["DOCUMENT_ROOT"] . '/app/ssIncludes.php';
+include $_SERVER["DOCUMENT_ROOT"] . '/app/ssi.php';
 
 $identifier = $_REQUEST["identifier"];
 if ($identifier)
-  setcookie("identifier", $_REQUEST["identifier"], time()+108000 , '/');
+  setcookie("identifier", $identifier, time()+108000 , '/');
 else
   $identifier = $_COOKIE["identifier"];
 
@@ -146,6 +146,8 @@ $authenticated = authenticate($identifier);
 -->
          <ul id = "subMenu8" class = "navSub" onmouseover = "expandMenu('subMenu8')" onmouseout = "expandMenu('subMenu8')">
          <li><a href = "mdirectory.php">Directory</a></li>
+         <li><a href = "yearbook/index.php">Yearbook</a></li>
+         <li><a href = "snc2010/index.php">SNC</a></li>
          </ul>
       </div>
       <div class = "scrollerButtonL">

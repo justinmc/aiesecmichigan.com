@@ -3,7 +3,7 @@
 /* This file talks directly with the sql database */
 
 
-$server = 'localhost'; //'aiesecmi.ipowermysql.com';
+$server = 'aiesecmi.ipowermysql.com';
 $username = 'aiesecmi';
 $password = 'wolverine.2';
 $db = "justin";

@@ -286,7 +286,7 @@ overflow: hidden;
 	text-align: left;
    	background: #80c805;
 	position: absolute; top: 0px; left: 0px;
-	height: 640px; width: 295px;
+	height: 690px; width: 200px;
    }
 
 /* middle column in content */
@@ -295,8 +295,8 @@ overflow: hidden;
    	color: #ffffff;
 	text-align: left;
    	background: #39bcf0;
-	position: absolute; top: 0px; left: 303px;
-	height: 640px; width: 295px;
+	position: absolute; top: 0px; left: 207px;
+	height: 690px; width: 200px;
    }
    
 /* right column in content */
@@ -305,8 +305,8 @@ overflow: hidden;
    	color: #ffffff;
 	text-align: left;
    	background: #a72201;
-	position: absolute; top: 0px; left: 606px;
-	height: 640px; width: 295px;
+	position: absolute; top: 0px; left: 414px;
+	height: 690px; width: 200px;
    }
    
 /* holds graphic at bottom of colLeft  */
@@ -316,7 +316,7 @@ overflow: hidden;
 		color: #ffffff;
 		text-align: center;
 		position: absolute; bottom: 0px; left: 0px;
-		height: 63px; width: 295px;
+		height: 43px; width: 200px;
 	  }
 
 /* holds graphic at bottom of colMid  */
@@ -326,7 +326,7 @@ overflow: hidden;
 		color: #ffffff;
 		text-align: center;
 		position: absolute; bottom: 0px; left: 0px;
-		height: 63px; width: 295px;
+		height: 43px; width: 200px;
 	  }
 	  
 /* holds graphic at bottom of colRight  */
@@ -336,7 +336,7 @@ overflow: hidden;
 		color: #ffffff;
 		text-align: center;
 		position: absolute; bottom: 0px; left: 0px;
-		height: 63px; width: 295px;
+		height: 43px; width: 200px;
 	  }
 
 /* some sort of decoration at the bottom of the main div */
@@ -461,6 +461,8 @@ img.colHead
 
 p.colContent
 {
-	position: relative; top: 234px; left: 10px;
-	width: 280px;
+	position: relative; top: 150px; left: 10px;
+	width: 184px;
+	font-size: 11pt;
+	text-indent: 0px;
 }
