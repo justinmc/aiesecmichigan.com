@@ -1,0 +1,6 @@
+         <h1>Access Denied</h1>
+		 <p>
+		 You are not authorized to view this page.  If you are an AIESEC Michigan member, please
+		 <a class="rpxnow" onclick="return false;" href="https://aiesecmichigan.rpxnow.com/openid/v2/signin?token_url=http%3A%2F%2Faiesecmichigan.com%2Fapp%2Frpx.php?return=http://www.aiesecmichigan.com/index.php"> Sign In </a>
+		 first.  If you think you received this message in error, please contact the webmasters at the bottom of the page to receive access.
+		 </p>
