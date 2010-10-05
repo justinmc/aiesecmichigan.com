@@ -59,7 +59,7 @@ function content($filename, $authenticated)
 	elseif ($filename == "http://www.aiesecmichigan.com/intern.php")
 		include ($_SERVER["DOCUMENT_ROOT"] . '/page/content/comingsoon.html');
 	elseif ($filename == "http://www.aiesecmichigan.com/alumni.php")
-		include ($_SERVER["DOCUMENT_ROOT"] . '/page/content/comingsoon.html');
+		include ($_SERVER["DOCUMENT_ROOT"] . '/page/content/alumni.html');
 	elseif ($filename == "http://www.aiesecmichigan.com/members.php")
     {
     	if ($authenticated)
@@ -67,6 +67,10 @@ function content($filename, $authenticated)
 		else
 		   include ($_SERVER["DOCUMENT_ROOT"] . '/page/content/accessdenied.html');
     }
+	elseif ($filename == "http://www.aiesecmichigan.com/alnewsletter.php")
+		include ($_SERVER["DOCUMENT_ROOT"] . '/page/content/alnewsletter.html');
+	elseif ($filename == "http://www.aiesecmichigan.com/alevents.php")
+		include ($_SERVER["DOCUMENT_ROOT"] . '/page/content/alevents.html');
     elseif ($filename == "http://www.aiesecmichigan.com/mdirectory.php")
     {
     	if ($authenticated)

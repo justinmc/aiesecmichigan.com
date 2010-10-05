@@ -1,4 +1,4 @@
-<!-- AIESEC Michigan, Beta -->
+<!-- AIESEC Michigan, Version 2 -->
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
@@ -131,10 +131,12 @@ $authenticated = authenticate($identifier);
          <li><a href = "index.php">Option1</a></li>
          <li><a href = "index.php">Option2</a></li>
          </ul>
+-->
          <ul id = "subMenu5" class = "navSub" onmouseover = "expandMenu('subMenu5')" onmouseout = "expandMenu('subMenu5')">
-         <li><a href = "index.php">Option1</a></li>
-         <li><a href = "index.php">Option2</a></li>
+         <li><a href = "alevents.php">Events</a></li>
+         <li><a href = "alnewsletter.php">Newsletter</a></li>
          </ul>
+<!--
          <ul id = "subMenu6" class = "navSub" onmouseover = "expandMenu('subMenu6')" onmouseout = "expandMenu('subMenu6')">
          <li><a href = "index.php">Option1</a></li>
          <li><a href = "index.php">Option2</a></li>
@@ -222,15 +224,22 @@ curl_close($ch);
       </div>
       <div class = "content">
          <?php 
-         
+
+         if (($filename == "http://www.aiesecmichigan.com/alumni.php") || ($filename == "http://www.aiesecmichigan.com/alnewsletter.php"))
+         {
+         	if ($_REQUEST["submitted"] == "1")
+         	   echo '<font style = "color: green">Submission successful</font>' . "\n";
+         	elseif ($_REQUEST["submitted"] == "-1")
+         	   echo '<font style = "color: red">Submission failed, invalid email address, please try again.</font>' . "\n";
+         	elseif ($_REQUEST["submitted"] == "-2")
+         	   echo '<font style = "color: red">Submission failed, please try again later.</font>' . "\n";
+         }
+       
          content($filename, $authenticated);
-         
+
+         bottomInfo($filename);
+      
          ?>
-               <?php 
-      
-      bottomInfo($filename);
-      
-      ?>
          <br><br><br><br><br>
       </div>
       <br><br><br><br>
