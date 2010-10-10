@@ -8,6 +8,8 @@
 <head>
 
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="description" content="International student organization at the University of Michigan">
+<meta name="keywords" content="AIESEC, Michigan, international, internships, University of Michigan, student, organization"> 
 
 <!-- CSS link -->
 <link rel = stylesheet type = "text/css" href = "public/stylesheets/main.css">
@@ -95,8 +97,8 @@ $authenticated = authenticate($identifier);
          <ul class = "nav">
          <li onmouseover = "expandMenu('subMenu1')" onmouseout = "expandMenu('subMenu1')"><a href = "index.php">Home</a></li>
          <li onmouseover = "expandMenu('subMenu2')" onmouseout = "expandMenu('subMenu2')"><a href = "join.php">Join</a></li>
-         <li onmouseover = "expandMenu('subMenu3')" onmouseout = "expandMenu('subMenu3')"><a href = "intern.php">Interns</a></li>
-         <li onmouseover = "expandMenu('subMenu4')" onmouseout = "expandMenu('subMenu4')"><a href = "businesses.php">Businesses</a></li>
+         <li onmouseover = "expandMenu('subMenu3')" onmouseout = "expandMenu('subMenu3')"><a href = "interns.php">Interns</a></li>
+         <li onmouseover = "expandMenu('subMenu4')" onmouseout = "expandMenu('subMenu4')"><a href = "businesses.php"><font style = "position: relative; left: -5px;">Businesses</font></a></li>
          <li onmouseover = "expandMenu('subMenu5')" onmouseout = "expandMenu('subMenu5')"><a href = "alumni.php">Alumni</a></li>
          <li onmouseover = "expandMenu('subMenu6')" onmouseout = "expandMenu('subMenu6')"><a href = "about.php">About</a></li>
          <li onmouseover = "expandMenu('subMenu7')" onmouseout = "expandMenu('subMenu7')"><a href = "contact.php">Contact</a></li>
@@ -120,7 +122,6 @@ $authenticated = authenticate($identifier);
          <ul id = "subMenu2" class = "navSub" onmouseover = "expandMenu('subMenu2')" onmouseout = "expandMenu('subMenu2')">
          <li><a href = "joinlc.php">Joining as a Member</a></li>
          <li><a href = "joinep.php">Joining as an Exchange Participant</a></li>
-         <li><a href = "joingoabroad.php">Going Abroad</a></li>
          </ul>
 <!-- 
          <ul id = "subMenu3" class = "navSub" onmouseover = "expandMenu('subMenu3')" onmouseout = "expandMenu('subMenu3')">
@@ -136,11 +137,11 @@ $authenticated = authenticate($identifier);
          <li><a href = "alevents.php">Events</a></li>
          <li><a href = "alnewsletter.php">Newsletter</a></li>
          </ul>
-<!--
          <ul id = "subMenu6" class = "navSub" onmouseover = "expandMenu('subMenu6')" onmouseout = "expandMenu('subMenu6')">
-         <li><a href = "index.php">Option1</a></li>
-         <li><a href = "index.php">Option2</a></li>
+         <li><a href = "abgoabroad.php">Going Abroad</a></li>
+         <li><a href = "abfaq.php">FAQ</a></li>
          </ul>
+<!--
          <ul id = "subMenu7" class = "navSub" onmouseover = "expandMenu('subMenu7')" onmouseout = "expandMenu('subMenu7')">
          <li><a href = "index.php">Option1</a></li>
          <li><a href = "index.php">Option2</a></li>
@@ -168,11 +169,11 @@ $authenticated = authenticate($identifier);
            
          ?>
          <p>
-         Our fall recruitment is now closed, thank you to everyone who submitted an application!  We'll
-         be holding interviews this Sunday, so stay tuned.  To anyone who missed the deadline, we'll
-         be recruiting again in October, check the  
+         AIESEC Michigan is recruiting in October!  We are especially targeting seniors graduating
+         this semester and looking to go abroad.  Applications should be opening up soon so keep an 
+         eye on these announcements for updates, and check the  
          <a href = "calendar.php">calendar</a>
-         for more info.
+         for specific dates.
          </p>
          <div class = "hr"></div>
          <br>
@@ -236,8 +237,6 @@ curl_close($ch);
          }
        
          content($filename, $authenticated);
-
-         bottomInfo($filename);
       
          ?>
          <br><br><br><br><br>
