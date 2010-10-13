@@ -169,11 +169,10 @@ $authenticated = authenticate($identifier);
            
          ?>
          <p>
-         AIESEC Michigan is recruiting in October!  We are especially targeting seniors graduating
-         this semester and looking to go abroad.  Applications should be opening up soon so keep an 
-         eye on these announcements for updates, and check the  
-         <a href = "calendar.php">calendar</a>
-         for specific dates.
+         AIESEC Michigan is currently recruiting!  Applications are due Thursday, Oct. 28th, at 11:59pm.  
+         Please create an account and fill out the application on
+         <a href = "http://www.aieseconline.net">aieseconline.net</a>.  Don't forget to come to our info
+         sessions as well, Monday and Tuesday the 25th and 26th, from 6-7pm in 3401 Mason Hall.
          </p>
          <div class = "hr"></div>
          <br>
