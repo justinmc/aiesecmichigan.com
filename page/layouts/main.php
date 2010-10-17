@@ -180,47 +180,14 @@ $authenticated = authenticate($identifier);
          <iframe src="http://www.google.com/calendar/embed?title=Events&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=400&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=obmgqmj8k4kqfenkv7enp0vln4%40group.calendar.google.com&amp;color=%23A32929&amp;ctz=America%2FNew_York" style=" border-width:0 " width="240" height="400" frameborder="0" scrolling="no"></iframe>
          <br>
          <div class = "hr"></div>
-         <h2>Blog</h2>
-         Hello!<br>
-         <p>
-         Hey guys Stephanie here, waiting in Minneapolis airport for my flight to Tokyo! It's going to be a 
-         long 48 hours. My flight schedule goes like this... Detroit--&gt; Minneapolis--&gt; Tokyo--&gt; Shanghai--&gt; Changchun. 
-         It's a blessing that I have a friend in Shanghai who will let me stay there for a night, or else I wouldn't be 
-         able to make it!...
-         </p>
+         <?php
+
+         xmlFirstDesc('http://aiesecmichigan.blogspot.com/feeds/posts/default?alt=rss');
+        
+         ?>
          <a href = "http://aiesecmichigan.blogspot.com" target = "_blank">Read more at the AIESEC Michigan Abroad blog</a>
          <br><br>
          <div class = "hr"></div>
-
-<?php
-
-// blog rss feed: http://aiesecmichigan.blogspot.com/feeds/posts/default?alt=rss
-
-//$feed = file_get_contents('http://aiesecmichigan.blogspot.com/feeds/posts/default?alt=rss');
-//echo '<br>|' . $feed . '|<br>';
-
-/*
-$ch = curl_init('http://aiesecmichigan.blogspot.com/feeds/posts/default?alt=rss');
-
-// Execute
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-curl_exec($ch);
-
-// Check if any error occured
-if(curl_errno($ch))
-{
-    echo '<span style="color:#22c922">The domain is available!</span>';
-} 
-else 
-{
-    echo '<span style="color:#c92222">The domain is not available</span>';
-}
-
-// Close handle
-curl_close($ch); 
-*/
-
-?>
       </div>
       <div class = "content">
          <?php 

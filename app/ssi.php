@@ -90,4 +90,34 @@ function content($filename, $authenticated)
 	return;
 }
 
+// Echoes the first description (shortened) of the given xml feed
+// Used for the first blog post from AIESEC Michigan Abroad
+function xmlFirstDesc($url)
+{
+	
+   $curl_handle=curl_init();
+   curl_setopt($curl_handle,CURLOPT_URL,$url);
+   curl_setopt($curl_handle,CURLOPT_CONNECTTIMEOUT,2);
+   curl_setopt($curl_handle,CURLOPT_RETURNTRANSFER,1);
+   $data = curl_exec($curl_handle);
+   curl_close($curl_handle);
+         
+   $xml = new SimpleXmlElement($data, LIBXML_NOCDATA);
+
+
+   echo "<h2>".$xml->channel->title."</h2>";
+   $cnt = count($xml->channel->item);
+   $url 	= $xml->channel->item[0]->link;
+   $title 	= $xml->channel->item[0]->title;
+   $desc = $xml->channel->item[0]->description->asXML();
+ 
+   echo '<b><a target = "_blank" href="' . $url . '">' . $title . '</a></b><br>';
+   echo '<p>' . abbreviate(removehtml($desc)) . '</p>';
+
+
+
+// Adapted from http://ditio.net/2008/06/19/using-php-curl-to-read-rss-feed-xml/
+	
+}
+
 ?>
