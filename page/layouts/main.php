@@ -169,7 +169,8 @@ $authenticated = authenticate($identifier);
            
          ?>
          <p>
-         AIESEC Michigan is currently recruiting!  Applications are due Thursday, Oct. 28th, at 11:59pm.  
+         AIESEC Michigan is currently recruiting!  We're mainly targeting people looking to go abroad this winter/spring; there
+         will be another recruitment in January for summer internships and members.  Applications are due Thursday, Oct. 28th, at 11:59pm.  
          Please create an account and fill out the application on
          <a href = "http://www.aieseconline.net">aieseconline.net</a>.  Don't forget to come to our info
          sessions as well, Monday and Tuesday the 25th and 26th, from 6-7pm in 3401 Mason Hall.
