@@ -48,6 +48,10 @@ function content($filename, $authenticated)
 		include ($_SERVER["DOCUMENT_ROOT"] . '/page/content/joinlc.html');
 	elseif ($filename == "http://www.aiesecmichigan.com/joinep.php")
 		include ($_SERVER["DOCUMENT_ROOT"] . '/page/content/joinep.html');
+	elseif ($filename == "http://www.aiesecmichigan.com/costs.php")
+		include ($_SERVER["DOCUMENT_ROOT"] . '/page/content/joincosts.html');
+	elseif ($filename == "http://www.aiesecmichigan.com/funding.php")
+		include ($_SERVER["DOCUMENT_ROOT"] . '/page/content/joinfunding.html');
 	elseif ($filename == "http://www.aiesecmichigan.com/contact.php")
 		include ($_SERVER["DOCUMENT_ROOT"] . '/page/content/contact.html');
 	elseif ($filename == "http://www.aiesecmichigan.com/businesses.php")

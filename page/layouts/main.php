@@ -35,7 +35,7 @@ include $_SERVER["DOCUMENT_ROOT"] . '/app/ssi.php';
 
 $identifier = $_REQUEST["identifier"];
 if ($identifier)
-  setcookie("identifier", $identifier, time()+108000 , '/');
+  setcookie("identifier", $identifier, time() +108000);
 else
   $identifier = $_COOKIE["identifier"];
 
@@ -97,9 +97,9 @@ $authenticated = authenticate($identifier);
          <ul class = "nav">
          <li onmouseover = "expandMenu('subMenu1')" onmouseout = "expandMenu('subMenu1')"><a href = "index.php">Home</a></li>
          <li onmouseover = "expandMenu('subMenu2')" onmouseout = "expandMenu('subMenu2')"><a href = "join.php">Join</a></li>
-         <li onmouseover = "expandMenu('subMenu3')" onmouseout = "expandMenu('subMenu3')"><a href = "interns.php">Interns</a></li>
-         <li onmouseover = "expandMenu('subMenu4')" onmouseout = "expandMenu('subMenu4')"><a href = "businesses.php"><font style = "position: relative; left: -5px;">Businesses</font></a></li>
-         <li onmouseover = "expandMenu('subMenu5')" onmouseout = "expandMenu('subMenu5')"><a href = "alumni.php">Alumni</a></li>
+         <li onmouseover = "expandMenu('subMenu3')" onmouseout = "expandMenu('subMenu3')"><a href = "businesses.php"><font style = "position: relative; left: -5px;">Businesses</font></a></li>
+         <li onmouseover = "expandMenu('subMenu4')" onmouseout = "expandMenu('subMenu4')"><a href = "alumni.php">Alumni</a></li>
+         <li onmouseover = "expandMenu('subMenu5')" onmouseout = "expandMenu('subMenu5')"><a href = "interns.php">Incoming</a></li>
          <li onmouseover = "expandMenu('subMenu6')" onmouseout = "expandMenu('subMenu6')"><a href = "about.php">About</a></li>
          <li onmouseover = "expandMenu('subMenu7')" onmouseout = "expandMenu('subMenu7')"><a href = "contact.php">Contact</a></li>
          <?php 
@@ -128,18 +128,22 @@ $authenticated = authenticate($identifier);
          <li><a href = "index.php">Option1</a></li>
          <li><a href = "index.php">Option2</a></li>
          </ul>
-         <ul id = "subMenu4" class = "navSub" onmouseover = "expandMenu('subMenu4')" onmouseout = "expandMenu('subMenu4')">
-         <li><a href = "index.php">Option1</a></li>
-         <li><a href = "index.php">Option2</a></li>
-         </ul>
 -->
-         <ul id = "subMenu5" class = "navSub" onmouseover = "expandMenu('subMenu5')" onmouseout = "expandMenu('subMenu5')">
+         <ul id = "subMenu4" class = "navSub" onmouseover = "expandMenu('subMenu4')" onmouseout = "expandMenu('subMenu4')">
          <li><a href = "alevents.php">Events</a></li>
          <li><a href = "alnewsletter.php">Newsletter</a></li>
          </ul>
+<!-- 
+         <ul id = "subMenu5" class = "navSub" onmouseover = "expandMenu('subMenu5')" onmouseout = "expandMenu('subMenu5')">
+         <li><a href = "index.php">Option1</a></li>
+         <li><a href = "index.php">Option2</a></li>
+         </ul>
+ -->
          <ul id = "subMenu6" class = "navSub" onmouseover = "expandMenu('subMenu6')" onmouseout = "expandMenu('subMenu6')">
-         <li><a href = "abgoabroad.php">Going Abroad</a></li>
          <li><a href = "abfaq.php">FAQ</a></li>
+         <li><a href = "abgoabroad.php">Going Abroad</a></li>
+         <li><a href = "costs.php">Costs</a></li>
+         <li><a href = "funding.php">Funding</a></li>
          </ul>
 <!--
          <ul id = "subMenu7" class = "navSub" onmouseover = "expandMenu('subMenu7')" onmouseout = "expandMenu('subMenu7')">
@@ -169,8 +173,8 @@ $authenticated = authenticate($identifier);
            
          ?>
          <p>
-         AIESEC Michigan is currently recruiting!  We're mainly targeting people looking to go abroad this winter/spring; there
-         will be another recruitment in January for summer internships and members.  Applications are due Monday, Nov. 1st, at 11:59pm.  
+         AIESEC Michigan is currently recruiting!  There is a rolling deadline for people looking to go abroad this winter/spring; there
+         will be another recruitment in January for summer internships and members. 
          Please create an account and fill out the application on
          <a href = "http://www.aieseconline.net">aieseconline.net</a>.
          </p>

@@ -266,6 +266,7 @@ overflow: hidden;
    border: 0px red solid;
    text-align: left;
    height: 1100px; width: 614px;
+   min-height: 1400px;
    position: relative; top: 0px; left: 110px;
    padding: 10px;
    }
@@ -424,6 +425,7 @@ font-weight: none;
 font-size: 12pt;
 }
 ul.nav li a:hover {background: #ffe1bb; color: #000000;}
+ul.nav li a:visited {color: #ffffff;}
 
 /* expanded nav buttons */
 ul.navSub
@@ -453,7 +455,8 @@ font-weight: none;
 font-size: 12pt;
 }
 ul.navSub li a:hover {background: #ffe1bb; color: #000000;}
-   
+ul.navSub li a:visited {color: #ffffff;}
+
 img.colHead
 {
 	position: absolute; top: 0px; left: 0px;
@@ -461,7 +464,7 @@ img.colHead
 
 p.colContent
 {
-	position: relative; top: 150px; left: 10px;
+	position: relative; top: 160px; left: 10px;
 	width: 184px;
 	font-size: 11pt;
 	text-indent: 0px;
