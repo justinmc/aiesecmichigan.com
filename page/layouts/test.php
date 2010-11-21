@@ -1,16 +1,10 @@
 <?php
 
-// Cookie must be set before any html!
 $identifier = $_REQUEST["identifier"];
 if ($identifier)
   setcookie("identifier", $identifier, time() +108000);
 else
   $identifier = $_COOKIE["identifier"];
-  
-if ($_REQUEST["logout"])
-{ setcookie("identifier", "", time() -108000);
-  $identifier = "";
-}
 
 ?>
 
@@ -49,7 +43,9 @@ include $_SERVER["DOCUMENT_ROOT"] . '/app/authentication.php';
 include $_SERVER["DOCUMENT_ROOT"] . '/app/io.php';
 include $_SERVER["DOCUMENT_ROOT"] . '/app/ssi.php';
 
-$authenticated = authenticate($identifier); // identifier set at top
+
+$authenticated = authenticate($identifier);
+
 
 ?>
 
@@ -79,7 +75,7 @@ $authenticated = authenticate($identifier); // identifier set at top
 
    if ($authenticated)
    {  echo '
-   <a class = "darkBG" href = "index.php?logout=1">Logout</a>
+   <a class = "darkBG" href = "app/logout.php?return=' . $filename . '">Logout</a>
    &nbsp;&nbsp;&nbsp;&nbsp;Welcome ' . getName($identifier) . '!';
    }
    else
