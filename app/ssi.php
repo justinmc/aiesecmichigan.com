@@ -73,10 +73,6 @@ function content($filename, $authenticated)
 		else
 		   include ($_SERVER["DOCUMENT_ROOT"] . '/page/content/accessdenied.html');
     }
-	elseif ($filename == "http://www.aiesecmichigan.com/alnewsletter.php")
-		include ($_SERVER["DOCUMENT_ROOT"] . '/page/content/alnewsletter.html');
-	elseif ($filename == "http://www.aiesecmichigan.com/alevents.php")
-		include ($_SERVER["DOCUMENT_ROOT"] . '/page/content/alevents.html');
     elseif ($filename == "http://www.aiesecmichigan.com/mdirectory.php")
     {
     	if ($authenticated)
@@ -84,6 +80,17 @@ function content($filename, $authenticated)
 		else
 		   include ($_SERVER["DOCUMENT_ROOT"] . '/page/content/accessdenied.html');
     }
+    elseif ($filename == "http://www.aiesecmichigan.com/mer.php")
+    {
+    	if ($authenticated)
+		   include ($_SERVER["DOCUMENT_ROOT"] . '/page/content/er.html');
+		else
+		   include ($_SERVER["DOCUMENT_ROOT"] . '/page/content/accessdenied.html');
+    }
+	elseif ($filename == "http://www.aiesecmichigan.com/alnewsletter.php")
+		include ($_SERVER["DOCUMENT_ROOT"] . '/page/content/alnewsletter.html');
+	elseif ($filename == "http://www.aiesecmichigan.com/alevents.php")
+		include ($_SERVER["DOCUMENT_ROOT"] . '/page/content/alevents.html');
 	else
 	{
 		echo 'Sorry!  The page you\'re trying to access does not exist.' . "<br>\n";

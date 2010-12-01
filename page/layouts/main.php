@@ -165,6 +165,7 @@ $authenticated = authenticate($identifier); // identifier set at top
          <li><a href = "mdirectory.php">Directory</a></li>
          <li><a href = "yearbook/index.php">Yearbook</a></li>
          <li><a href = "snc2010/index.php">SNC</a></li>
+         <li><a href = "mer.php">ER</a></li>
          </ul>
       </div>
       <div class = "scrollerButtonL">
@@ -183,13 +184,44 @@ $authenticated = authenticate($identifier); // identifier set at top
            
          ?>
          <p>
-         AIESEC Michigan is currently recruiting!  There is a rolling deadline for people looking to go abroad this winter/spring; there
-         will be another recruitment in January for summer internships and members. 
-         Please create an account and fill out the application on
-         <a href = "http://www.aieseconline.net">aieseconline.net</a>.
+         AIESEC Michigan will start accepting applications at the beginning of the winter semester.  Apps will be due Januray 20.
+         Keep an eye on these announcements for when the application is released.
          </p>
          <div class = "hr"></div>
          <br>
+         <!--  Twitter Widget -->
+         <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+		 <script>
+		 new TWTR.Widget({
+  		 version: 2,
+  		 type: 'profile',
+  		 rpp: 3,
+  		 interval: 6000,
+  		 width: 240,
+  		 height: 300,
+  		 theme: {
+    		 shell: {
+      		 background: '#718acd',
+      		 color: '#ffffff'
+    		 },
+    		 tweets: {
+      		 background: '#fff3ce',
+      		 color: '#000000',
+      		 links: '#ff8400'
+     		 }
+  		 },
+  		 features: {
+    		 scrollbar: false,
+    		 loop: false,
+    		 live: false,
+    		 hashtags: true,
+    		 timestamp: true,
+    		 avatars: false,
+    		 behavior: 'all'
+  		 }
+		 }).render().setUser('aiesecmichigan').start();
+		 </script>
+         <br></br>
          <a href = "calendar.php" style = "float: right;">View Calendar</a>
          <iframe src="http://www.google.com/calendar/embed?title=Events&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=400&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=obmgqmj8k4kqfenkv7enp0vln4%40group.calendar.google.com&amp;color=%23A32929&amp;ctz=America%2FNew_York" style=" border-width:0 " width="240" height="400" frameborder="0" scrolling="no"></iframe>
          <br>
