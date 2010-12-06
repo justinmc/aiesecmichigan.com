@@ -40,6 +40,8 @@ function content($filename, $authenticated)
 {
 	if ($filename == "http://www.aiesecmichigan.com/index.php")
 		include ($_SERVER["DOCUMENT_ROOT"] . '/page/content/home.html');
+	elseif ($filename == "http://www.aiesecmichigan.com/legacylinks.php")
+		include ($_SERVER["DOCUMENT_ROOT"] . '/page/content/home.html');
 	elseif ($filename == "http://www.aiesecmichigan.com/calendar.php")
 		include ($_SERVER["DOCUMENT_ROOT"] . '/page/content/calendar.html');
     elseif ($filename == "http://www.aiesecmichigan.com/join.php")
