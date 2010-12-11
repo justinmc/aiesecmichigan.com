@@ -251,13 +251,17 @@ $authenticated = authenticate($identifier); // identifier set at top
          content($filename, $authenticated);
       
          ?>
+         <h2>AIESEC Michigan's Sponsors (Location 1)</h2>
+            Lorem ipsum <a href = "">dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt</a><br>
+            <a href = "">ut labore et dolore</a> ut labore et dolore magna aliqua.<br>
+            Ut enim <a href = "">ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</a><br>
          <br><br><br><br><br><br><br><br><br>
       </div>
       <br><br><br><br>
       <div class = "bottombarContent">
          <img src = "public/images/barBottom.png" alt = "">
          <div class = "bottombarFull">
-            <b>AIESEC Michigan's Sponsors</b><br>
+            <b>AIESEC Michigan's Sponsors (Location 2)</b><br>
             Lorem ipsum <a class = "darkBG" href = "">dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt</a><br>
             <a class = "darkBG" href = "">ut labore et dolore</a> ut labore et dolore magna aliqua.<br>
             Ut enim <a class = "darkBG" href = "">ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</a><br>
