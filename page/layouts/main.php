@@ -88,13 +88,6 @@ $authenticated = authenticate($identifier); // identifier set at top
    }
    
 ?>
-<!--
-      <form>
-   	  <input type = "text" name = "username" value = "Username">&nbsp;&nbsp;
-	  <input type = "password" name = "password" value = "password">
-	  <input type = "submit" value = "Login">
-      </form>
--->
    </div>
 </div>
 <div class = "background"></div>
@@ -179,14 +172,12 @@ $authenticated = authenticate($identifier); // identifier set at top
       <div class = "topBar"></div>
       <div class = "leftbar">
          <h2>Announcements</h2>
+         <p>
          <?php 
                   
-         //announcement();
+         announcement();
            
          ?>
-         <p>
-         AIESEC Michigan will start accepting applications at the beginning of the winter semester.  Apps will be due Januray 20.
-         Keep an eye on these announcements for when the application is released.
          </p>
          <div class = "hr"></div>
          <br>

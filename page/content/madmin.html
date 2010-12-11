@@ -1,6 +1,17 @@
          <h1>Administrator Tools</h1>
 		 <p>
 		 Here you will be able to update the announcements in the bar on the left through
-		 your web browser.  No code needed.  Coming soon.
+		 your web browser, no code needed.  Coming soon, it doesn't work yet!
 		 </p>
-		 
+		 <br>
+		 <form method = "post" action = "">
+         <textarea id="announcement" name="announcement" rows="10" cols="50">
+         <?php 
+         
+         announcement();
+         
+         ?>
+         </textarea>
+		 <br>
+         <input type = "submit" value = "Submit">
+         </form>

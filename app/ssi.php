@@ -19,20 +19,8 @@ function navBar() // unused now right?  and unnecessary?
 
 function announcement()
 {
-           $con = mysql_connect("aiesecmi.ipowermysql.com", "aiesecmi", "wolverine.2");
-
-           if (!$con)
-           {
-              die('Could not connect: ' . mysql_error());
-           }
-           mysql_select_db("justin");
-           $QUERY = mysql_query("SELECT * FROM announcements WHERE id = 1");
-           $DATA = mysql_fetch_array($QUERY);
-
-           mysql_close($con);
-
+           $DATA = getDB("announcements", 1);
            echo $DATA['text'];
-           
            return;
 }
 
