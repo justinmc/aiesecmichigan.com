@@ -75,6 +75,13 @@ function content($filename, $authenticated)
 		else
 		   include ($_SERVER["DOCUMENT_ROOT"] . '/page/content/accessdenied.html');
     }
+	elseif ($filename == "http://www.aiesecmichigan.com/admin.php")
+    {
+    	if ($authenticated)
+		   include ($_SERVER["DOCUMENT_ROOT"] . '/page/content/madmin.html');
+		else
+		   include ($_SERVER["DOCUMENT_ROOT"] . '/page/content/accessdenied.html');
+    }
     elseif ($filename == "http://www.aiesecmichigan.com/mdirectory.php")
     {
     	if ($authenticated)

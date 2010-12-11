@@ -162,10 +162,11 @@ $authenticated = authenticate($identifier); // identifier set at top
          </ul>
 -->
          <ul id = "subMenu8" class = "navSub" onmouseover = "expandMenu('subMenu8')" onmouseout = "expandMenu('subMenu8')">
+         <li><a href = "admin.php">Admin</a></li>
          <li><a href = "mdirectory.php">Directory</a></li>
+         <li><a href = "mer.php">ER</a></li>
          <li><a href = "yearbook/index.php">Yearbook</a></li>
          <li><a href = "snc2010/index.php">SNC</a></li>
-         <li><a href = "mer.php">ER</a></li>
          </ul>
       </div>
       <div class = "scrollerButtonL">
