@@ -274,8 +274,8 @@ overflow: hidden;
 /* My 3 column ep, lc joiner, and partner info place */
 .bottomInfo
 {
- background: #ffffff;
- height: 740px; width: 100%;
+ background: transparent;
+ height: 690px; width: 100%;
  border: 0px red solid;
  position: relative; top: 0px; left: 0px;
 }
