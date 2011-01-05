@@ -77,7 +77,7 @@ function content($filename, $authenticated)
 		else
 		   include ($_SERVER["DOCUMENT_ROOT"] . '/page/content/accessdenied.html');
     }
-    elseif ($filename == "http://www.aiesecmichigan.com/mer.php")
+    elseif ($filename == "http://www.aiesecmichigan.com/er.php")
     {
     	if ($authenticated)
 		   include ($_SERVER["DOCUMENT_ROOT"] . '/page/content/er.html');
