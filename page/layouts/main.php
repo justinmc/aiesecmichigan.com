@@ -34,7 +34,8 @@ if ($_REQUEST["logout"])
 <![EndIf]-->
 
 
-<!-- JavaScript link -->
+<!-- JavaScript links -->
+<script type="text/javascript" src="public/javascripts/jquery-1.3.2.js"></script>
 <script type="text/javascript" src="public/javascripts/sideScroller.js"></script>
 <script type="text/javascript" src="public/javascripts/navMenu.js"></script>
 
@@ -162,13 +163,9 @@ $authenticated = authenticate($identifier); // identifier set at top
          <li><a href = "snc2010/index.php">SNC</a></li>
          </ul>
       </div>
-      <div class = "scrollerButtonL">
-         <a href = "#" onclick = "pageScrollBack()"><img src = "public/images/arrowLeft.png" border = "0"></a>
-      </div>
-      <div class = "scrollerButtonR">
-         <a href = "#" onclick = "pageScroll()"><img src = "public/images/arrowRight.png" border = "0"></a>
-      </div>
-      <div class = "scroller" id = "scrollMe"><!--  <img src = "public/images/banner0.jpg"><img src = "public/images/banner1.jpg"> --> <img src = "public/images/banner4.jpg"><img src = "public/images/banner2.jpg"><img src = "public/images/banner3.jpg"></div>
+      <img class = "scrollerButtonL" src = "public/images/arrowLeft.png" border = "0">
+      <img class = "scrollerButtonR" src = "public/images/arrowRight.png" border = "0">
+      <div class = "scroller"><!--  <img src = "public/images/banner0.jpg"><img src = "public/images/banner1.jpg"> --> <img src = "public/images/banner4.jpg"><img src = "public/images/banner2.jpg"><img src = "public/images/banner3.jpg"></div>
       <div class = "topBar"></div>
       <div class = "leftbar">
          <h2>Announcements</h2>

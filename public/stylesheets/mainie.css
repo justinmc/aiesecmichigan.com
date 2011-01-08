@@ -207,21 +207,17 @@ overflow: hidden;
 		overflow: hidden;
 	  }
 
-/* Holds the left/right scroll butttons now that I removed the scroll bar */
+/* Holds the left/right scroll buttons now that I removed the scroll bar */
    .scrollerButtonL
    {
   	position: absolute; top: 318px; left: 4px;
-	height: 32px; width: 32px;
-	background: transparent;
-	border: 0px white solid;
+	cursor: pointer;
 	z-index: 2;
    }
    .scrollerButtonR
    {
   	position: absolute; top: 318px; left: 864px;
-	height: 32px; width: 32px;
-	background: transparent;
-	border: 0px white solid;
+	cursor: pointer;
 	z-index: 2;
    }
 
@@ -230,7 +226,7 @@ overflow: hidden;
    {
    	background: #ffffff;
 	position: relative; top: 4px; left: 0px;
-	height: 227px; width: inherit;
+	height: 227px; width: 2700px;
 	z-index: 1;
 	white-space: nowrap;
 	overflow: hidden;

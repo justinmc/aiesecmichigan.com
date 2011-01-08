@@ -1,64 +1,66 @@
-i = 0;
-var speed = 10;
-function pageScroll()
+/***************************************************************************
+This file controls the side scrolling image bar
+
+Interested in how it works?  Check out the source on github:
+github.com/justinmc/Scrolling-Image-Bar
+
+***************************************************************************/
+
+// Settings
+var speedJQ = 1.5 * 1000; // how long each transition is, milliseconds
+var frequencyJQ = 6 * 1000; // how often framesJQ change, milliseconds
+var widthJQ = 900; // width of each frame to scroll, pixels
+var framesJQ = 3; // how many total frames there are to scroll
+
+// Initialize
+var posJQ = 0;
+
+$(document).ready(
+function()
 {
-   i = i + speed;
-   var div = document.getElementById("scrollMe");
-   div.scrollLeft = i;
-   t1 = setTimeout("pageScroll()",10);
-   if (!(i % 900))
-      clearTimeout(t1);
-   if (i >= (div.scrollWidth - 800))
-   {
-    rewind();
-   }
-   clearInterval(t2);
-   autoScroll();
+    $(".scrollerButtonL").bind('click',scrollLeft);
+    $(".scrollerButtonR").bind('click',scrollRight);
+}
+);
+
+timer = setInterval("scrollRight()",frequencyJQ);
+
+function scrollLeft()
+{
+    if (posJQ > 0) // scroll left if you can
+    {
+        $(".scroller").animate({right:(posJQ-widthJQ)+"px"},speedJQ);
+        posJQ = posJQ - widthJQ;
+    }
+    else // otherwise go to the last frame
+    {
+    	$(".scroller").animate({right:(widthJQ*(framesJQ-1))+"px"},speedJQ);
+    	posJQ = widthJQ * (framesJQ - 1);
+    }
+    // reset the timer
+    clearInterval(timer);
+    timer = setInterval("scrollRight()",frequencyJQ);
 }
 
-function pageScrollBack()
+function scrollRight()
 {
-   i = i - speed;
-   var div = document.getElementById("scrollMe");
-   div.scrollLeft = i;
-   t1 = setTimeout("pageScrollBack()",10);
-   if (!(i % 900))
-      clearTimeout(t1);
-   if (i < 0)
-   {
-      fastforward();
-   }
-   clearInterval(t2);
-   autoScroll();
+    if (posJQ < widthJQ * (framesJQ - 1)) // scroll right if you can
+    {
+    	$(".scroller").animate({right:(posJQ+widthJQ)+"px"},speedJQ);
+    	posJQ = posJQ + widthJQ;
+    }
+    else // otherwise go to the first frame
+    {
+    	$(".scroller").animate({right:"0px"},speedJQ);
+    	posJQ = 0;
+    }
+    // reset the timer
+    clearInterval(timer);
+    timer = setInterval("scrollRight()",frequencyJQ);
 }
 
-function rewind()
+function foo()
 {
-   i = i - (speed * 3);
-   var div = document.getElementById("scrollMe");
-   div.scrollLeft = i;
-   t1 = setTimeout("rewind()",10);
-   if (i <= 0) 
-   {
-    clearTimeout(t1);
-	i = 0;
-   }
-}
-
-function fastforward()
-{
-	i = i + (speed * 3);
-   var div = document.getElementById("scrollMe");
-   div.scrollLeft = i;
-   t1 = setTimeout("fastforward()",10);
-   if (i >= (div.scrollWidth - 800))
-   {
-    clearTimeout(t1);
-	i = (div.scrollWidth - 800);
-   }
-}
-
-function autoScroll()
-{
-	t2 = setInterval("pageScroll()",10000);
+	$("#changeMe").hide();
+	$(".scroller").animate({left:"100px"},"slow");
 }
