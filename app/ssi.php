@@ -19,7 +19,7 @@ function navBar() // unused now right?  and unnecessary?
 
 function announcement()
 {
-           $DATA = getDB("announcements", 1);
+           $DATA = getDB("announcements", getrows("announcements"));
            echo $DATA['text'];
            return;
 }
