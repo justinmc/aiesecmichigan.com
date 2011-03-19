@@ -71,7 +71,7 @@ $authenticated = authenticate($identifier); // identifier set at top
 
 </head>
 
-<body onload = "autoScroll()">
+<body>
 
 <div class = "bannerTop">
    <div class = "bannerTopRight"></div>
