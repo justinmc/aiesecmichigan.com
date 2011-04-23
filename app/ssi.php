@@ -1,30 +1,20 @@
 <?php 
 
-function navBar() // unused now right?  and unnecessary?
-{   
-     echo '
-	  <ul class = "nav">
-      <li><a href = "index.php">Home</a></li>
-      <li><a href = "join.php">Join</a></li>
-      <li><a href = "index.php">Go_Abroad</a></li>
-      <li><a href = "index.php">Intern</a></li>
-      <li><a href = "index.php">Businesses</a></li>
-      <li><a href = "index.php">Alumni</a></li>
-      <li><a href = "index.php">Members</a></li>
-      <li><a href = "about.php">About</a></li>
-      <li><a href = "index.php">Contact</a></li>
-      </ul>' . "\n";
-	return;
-}
+/****************************************************************************
+ *
+ * This file contains all server side includes used by the layouts
+ *
+****************************************************************************/
 
-function announcement()
+
+// Echoes the most recent announcement
+function ssiAnnouncement()
 {
-           $DATA = getDB("announcements", getrows("announcements"));
-           echo $DATA['text'];
-           return;
+	echo announceRead(0);
+
 }
 
-function content($filename, $authenticated)
+function ssiContent($filename, $authenticated)
 {
 	if ($filename == "http://www.aiesecmichigan.com/index.php")
 		include ($_SERVER["DOCUMENT_ROOT"] . '/page/content/home.html');
@@ -100,7 +90,7 @@ function content($filename, $authenticated)
 
 // Echoes the first description (shortened) of the given xml feed
 // Used for the first blog post from AIESEC Michigan Abroad
-function xmlFirstDesc($url)
+function ssiXMLFirstDesc($url)
 {
 	
    $curl_handle=curl_init();
@@ -122,7 +112,7 @@ function xmlFirstDesc($url)
    echo '<b><a target = "_blank" href="' . $url . '">' . $title . '</a></b><br>';
    echo '<p>' . abbreviate(removehtml($desc)) . '</p>';
 
-
+	return;
 
 // Adapted from http://ditio.net/2008/06/19/using-php-curl-to-read-rss-feed-xml/
 	

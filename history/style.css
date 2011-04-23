@@ -1,0 +1,83 @@
+a {cursor: pointer;}
+a.darkBG:link {color: #d8dfe5; text-decoration: none;}
+a.darkBG:visited {color: #d8dfe5; text-decoration: none;} 
+a.darkBG:hover {color: #ffffff; text-decoration: underline;} 
+a:link {color: #ff8400; text-decoration: underline;}
+a:visited {color: #ff8400; text-decoration: underline;}
+a:hover {color: #b7baaf; text-decoration: none;} 
+
+#darkBG:link {color: #d8dfe5; text-decoration: none;}
+#darkBG:visited {color: #d8dfe5; text-decoration: none;} 
+#darkBG:hover {color: #ffffff; text-decoration: underline;}
+
+body
+{ 
+background: #7d8fea;
+font-size: 13pt;
+text-align: center;
+height: 100%;
+overflow-x: hidden;
+}
+
+p
+{
+text-indent: 40px;
+font-size: 12pt;
+}
+
+h1
+{
+color: #cbcbcc;
+text-decoration: none;
+font-size: 28pt;
+text-align: center;
+}
+
+h2
+{
+text-decoration: underline;
+font-size: 16pt;
+}
+
+h3
+{
+font-size: 13pt;
+text-align: left;
+}
+
+h4
+{
+color: #f8a750;
+text-decoration: underline;
+font-size: 16pt;
+text-align: left;
+}
+   
+/* Fancy fade background at the top */
+.background
+{
+	background-image: url('../images/backTop.jpg');
+    position: absolute; top: 32px; left: 50%;
+	margin-left: -700px; /* this should be half the width of the div - tricky centering hack */
+	height: 586px; width: 1400px;
+	z-index: 0;
+}
+
+/* wraps the all div and the bottombar together, so that bottombar can stick to the bottom of the page */
+.wrapper
+{
+	background: transparent;
+	position: relative;
+	height: auto; width: 101%;
+}
+
+/* contains everything besides the background */
+.all
+{
+background: transparent;
+border: 0px pink solid;
+margin: 0 auto;
+height: auto; width: 900px;
+position: relative; top: 34px; left: 16px;
+overflow: hidden;
+}

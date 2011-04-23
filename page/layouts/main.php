@@ -46,9 +46,11 @@ if ($_REQUEST["logout"])
 
 <?php
 
+include $_SERVER["DOCUMENT_ROOT"] . '/app/sql.php';
 include $_SERVER["DOCUMENT_ROOT"] . '/app/authentication.php';
 include $_SERVER["DOCUMENT_ROOT"] . '/app/io.php';
 include $_SERVER["DOCUMENT_ROOT"] . '/app/ssi.php';
+include $_SERVER["DOCUMENT_ROOT"] . '/app/announce.php';
 
 $authenticated = authenticate($identifier); // identifier set at top
 
@@ -81,7 +83,7 @@ $authenticated = authenticate($identifier); // identifier set at top
    if ($authenticated)
    {  echo '
    <a class = "darkBG" href = "index.php?logout=1">Logout</a>
-   &nbsp;&nbsp;&nbsp;&nbsp;Welcome ' . getName($identifier) . '!';
+   &nbsp;&nbsp;&nbsp;&nbsp;Welcome ' . getParam("name", $identifier) . '!';
    }
    else
    {  echo '
@@ -95,7 +97,7 @@ $authenticated = authenticate($identifier); // identifier set at top
 <div class = "wrapper">
    <div class = "all">
       <div class = "titlebar">
-      <a href = "index.php"><img class = "title" border = "0" src = "public/images/title4.png"></a>
+      	<a href = "index.php"><img class = "title" border = "0" src = "public/images/title4.png"></a>
       </div>
       <div class = "navbar">
          <ul class = "nav">
@@ -172,9 +174,10 @@ $authenticated = authenticate($identifier); // identifier set at top
          <p>
          <?php 
                   
-         announcement();
-           
-         ?>
+		// Echo the most recent announcement from the database
+		ssiAnnouncement(0);
+
+		?>
          </p>
          <div class = "hr"></div>
          <br>
@@ -213,11 +216,11 @@ $authenticated = authenticate($identifier); // identifier set at top
          <br></br>
          <a href = "calendar.php" style = "float: right;">View Calendar</a>
          <iframe src="http://www.google.com/calendar/embed?title=Events&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=400&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=obmgqmj8k4kqfenkv7enp0vln4%40group.calendar.google.com&amp;color=%23A32929&amp;ctz=America%2FNew_York" style=" border-width:0 " width="240" height="400" frameborder="0" scrolling="no"></iframe>
-         <br>
+         <br><br>
          <div class = "hr"></div>
          <?php
 
-         xmlFirstDesc('http://aiesecmichigan.blogspot.com/feeds/posts/default?alt=rss');
+         ssiXMLFirstDesc('http://aiesecmichigan.blogspot.com/feeds/posts/default?alt=rss');
         
          ?>
          <a href = "http://aiesecmichigan.blogspot.com" target = "_blank">Read more at the AIESEC Michigan Abroad blog</a>
@@ -237,7 +240,7 @@ $authenticated = authenticate($identifier); // identifier set at top
          	   echo '<font style = "color: red">Submission failed, please try again later.</font>' . "\n";
          }
        
-         content($filename, $authenticated);
+         ssiContent($filename, $authenticated);
       
          ?>
          <br><br><br><br><br>

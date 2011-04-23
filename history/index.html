@@ -1,0 +1,62 @@
+<!-- AIESEC Michigan History Site -->
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="description" content="International student organization at the University of Michigan">
+<meta name="keywords" content="AIESEC, Michigan, international, internships, University of Michigan, student, organization, history"> 
+
+<!-- CSS link -->
+<link rel = stylesheet type = "text/css" href = "style.css">
+<!--[if IE]>
+<link rel = stylesheet type = "text/css" href = "styleie.css">
+<![EndIf]-->
+
+<title> AIESEC Michigan - History </title>
+
+<!-- Favicon link -->
+<link REL="SHORTCUT ICON" HREF="../public/images/favicon.ico">
+
+</head>
+
+<body>
+
+	<h1>A I E S E C M I C H I G A N</h1>
+	<canvas id="background" width="900" height="500" style="border:1px solid #c3c3c3;">
+    Your browser does not support the canvas element.
+    </canvas>
+	<br><br>
+	<canvas id="timeline" width="80" height="40" style="border:1px solid #c3c3c3;">
+    Your browser does not support the canvas element.
+    </canvas>
+
+<script type="text/javascript">
+
+var bg=document.getElementById("background");
+var width = bg.width;
+var height = bg.height;
+var cxt=bg.getContext("2d");
+cxt.fillStyle="#cbcbcc";
+cxt.fillRect(0,0,width,height);
+
+var tl=document.getElementById("timeline");
+var mxt=tl.getContext("2d");
+mxt.strokeStyle = '#cbcbcc';
+mxt.lineWidth=8;
+mxt.moveTo(10,10);
+mxt.lineTo(150,50);
+mxt.lineTo(10,50);
+mxt.stroke();
+
+tl.onClick("tl.left: 100px;");
+
+</script>
+
+</body>
+
+</html>

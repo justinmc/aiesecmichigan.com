@@ -1,10 +1,11 @@
 <?php
 
-/* 
+/******************************************************************************
+ *
  * This file just does some basic authentication stuff
- * Check rpx.php for the actual authentication code, which I got from janrain */
-
-include $_SERVER["DOCUMENT_ROOT"] . '/app/sql.php'; 
+ * Check rpx.php for the actual authentication code, which I got from janrain 
+ *
+******************************************************************************/
 
 
 // Checks database for given email address to see if you're allowed in, on initial login
@@ -25,13 +26,13 @@ function authenticate ($identifier)
 	   return 0;
 }
 
-// returns the user's name given his identifier.  Should it use his email instead?
-function getName($identifier)
+// returns the requested column for the user given their identifier
+function getParam($col, $identifier)
 {
     $row = colCont('identifier', $identifier, "users");
     if (($row != -1) && ($identifier))
     {  $DATA = getDB("users", $row);
-       return ($DATA['name']);
+       return ($DATA[$col]);
     }
     else
        return "";
