@@ -1,16 +1,18 @@
 aiesecmichigan.com
 Author: Justin McCandless
-Date Published:	September 8th, 2010
+Date Published Originally:	September 8th, 2010
 
 aiesecmichigan.com is the website for the University of Michigan chapter
 of the student organization AIESEC.
 
 
-Ideas:
+Notes:
 
-admin page
-	update announcements
-		keep all old ones in database, read the newest
-culture page
-	embed Purdue challenge video, Roks video
-	
+This project works with a mysql database.
+A clean checkout of this repo will not run.  A config.php file is needed in the app/ folder, in which the following should be specified:
+	host		// where the mysql database is located
+	username	// mysql username with read/write access
+	password	// mysql password
+	db			// the mysql database used by this project
+Also, the database must obviously be set up for the app to run!
+

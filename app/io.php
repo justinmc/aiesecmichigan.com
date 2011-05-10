@@ -1,16 +1,21 @@
 <?php
 
-// This file contains all input/output stuff, particularly regarding interfacing with the blog's rss feed
+// This file contains all input/output stuff
 
-function removehtml($text)													// Removes all html tags from the input, as well as &nbsp;, and replaces accented characters
-{																			// Used for the newsbar, where we don't want big headings, etc.
-   $text = " " . $text;														// Prevents the whole html at first character returning a 0 problem.   
+
+function removehtml($text)									// Removes all html tags from the input, as well as &nbsp;, and replaces accented characters
+{
+   $text = " " . $text;										// Prevents the whole html at first character returning a 0 problem.   
+   $text = str_replace("&lt;", "<", $text);							// Work around to fix some html tags hard written in with &lt; &gt;
+   $text = str_replace("&gt;", ">", $text);
+
    $gow = 1;
    while ($gow)
    {
-      $gof = 1;   
+      $gof = 1;
       $here = strpos($text, "<");
-      if (!$here)
+
+      if ($here === FALSE)
       {  $gow = 0;
          $gof = 0;
       }
@@ -29,26 +34,26 @@ function removehtml($text)													// Removes all html tags from the input, 
    $text = str_replace("&lt;div&gt;", " ", $text);						// And remove div tags cause they're still there...
    $text = str_replace("&nbsp;", "", $text);							// And gets rid of &nbsp;
    $text = str_replace("&aacute;", "á", $text);							// And fixes characters
-   $text = str_replace("&Aacute;", "Á", $text);							// And fixes characters
-   $text = str_replace("&eacute;", "é", $text);							// And fixes characters
-   $text = str_replace("&Eacute;", "É", $text);							// And fixes characters
-   $text = str_replace("&iacute;", "í", $text);							// And fixes characters
-   $text = str_replace("&Iacute;", "Í", $text);							// And fixes characters
-   $text = str_replace("&oacute;", "ó", $text);							// And fixes characters
-   $text = str_replace("&Oacute;", "Ó", $text);							// And fixes characters
-   $text = str_replace("&uacute;", "ú", $text);							// And fixes characters
-   $text = str_replace("&Uacute;", "Ú", $text);							// And fixes characters
-   $text = str_replace("&ntilde;", "ñ", $text);							// And fixes characters
-   $text = str_replace("&Ntilde;", "Ñ", $text);							// And fixes characters
-   $text = str_replace("&uuml;", "ü", $text);							// And fixes characters
-   $text = str_replace("&Uuml;", "Ü", $text);							// And fixes characters
-   $text = str_replace("&iexcl;", "¡", $text);							// And fixes characters
-   $text = str_replace("&iquest;", "¿", $text);							// And fixes characters
-   $text = str_replace("&ldquo;", "\"", $text);							// And fixes characters
-   $text = str_replace("&rdquo;", "\"", $text);							// And fixes characters
-   $text = str_replace("&ndash;", "-", $text);							// And fixes characters
-   $text = str_replace("Ã", "í", $text);
- 
+   $text = str_replace("&Aacute;", "Á", $text);							// And fixes characters...
+   $text = str_replace("&eacute;", "é", $text);
+   $text = str_replace("&Eacute;", "É", $text);	
+   $text = str_replace("&iacute;", "í", $text);	
+   $text = str_replace("&Iacute;", "Í", $text);	
+   $text = str_replace("&oacute;", "ó", $text);	
+   $text = str_replace("&Oacute;", "Ó", $text);		
+   $text = str_replace("&uacute;", "ú", $text);		
+   $text = str_replace("&Uacute;", "Ú", $text);	
+   $text = str_replace("&ntilde;", "ñ", $text);		
+   $text = str_replace("&Ntilde;", "Ñ", $text);		
+   $text = str_replace("&uuml;", "ü", $text);	
+   $text = str_replace("&Uuml;", "Ü", $text);		
+   $text = str_replace("&iexcl;", "¡", $text);	
+   $text = str_replace("&iquest;", "¿", $text);	
+   $text = str_replace("&ldquo;", "\"", $text);	
+   $text = str_replace("&rdquo;", "\"", $text);	
+   $text = str_replace("&ndash;", "-", $text);
+   $text = str_replace("Ã", "í", $text); 
+
    return($text);
 }
 	

@@ -8,6 +8,8 @@
 ******************************************************************************/
 
 
+require $_SERVER["DOCUMENT_ROOT"] . '/app/sql.php';
+
 // Checks database for given email address to see if you're allowed in, on initial login
 function allowed($email)
 {
@@ -42,7 +44,7 @@ function getParam($col, $identifier)
 function updateID($email, $id)
 {
 	$row = colCont('googleAccount', $email, "users");
-	$DATA = getdb("users", $row);
+	$DATA = getDB("users", $row);
 
 	if (!$DATA['identifier'])
 		writeDB($row, 'identifier', $id, "users");

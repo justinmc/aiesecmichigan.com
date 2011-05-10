@@ -9,20 +9,12 @@
 
 require ($_SERVER["DOCUMENT_ROOT"] . '/app/config.php');
 
-/*$server = 'localhost'; // 'aiesecmi.ipowermysql.com';
-$username = 'aiesecmi';
-$password = 'wolverine.2';
-$db = "justin";
- */
-
-
-
 // Accesses the database, returns an array of a given row
 function getDB ($table, $row)
 {  global $server, $username, $password, $db;
    $con = mysql_connect($server, $username, $password);
    if (!$con)
-      die('getdb could not connect: ' . mysql_error());
+      die('getDB could not connect: ' . mysql_error());
 
    mysql_select_db($db);
    
@@ -102,7 +94,7 @@ function insertLine($index, $string, $table)
 	$queryFake = "INSERT INTO `announcements` ( `index` , `date` , `by` , `text` ) VALUES ('5', '2011-04-23 00:07:59', 'Justin on phpmyadmin', 'Recruitment is closed for this summer. We'll be recruiting new members again in the fall.');";
 
 //	mysql_query($queryFake);
-	mysql_query("INSERT INTO `announcements` ( `index` , `date` , `by` , `text` ) VALUES ('5', '2011-04-23 00:07:59', 'Justin from code', 'Recruitment is closed for this summer. We'll be recruiting new members again in the fall.');");
+	mysql_query("INSERT INTO `announcements` ( `index` , `date` , `by` , `text` ) VALUES ('6', '2011-04-23 00:07:59', 'Justin from code', 'Recruitment is closed for this summer. We'll be recruiting new members again in the fall.');");
 
     mysql_close($con);
 }

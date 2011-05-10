@@ -29,7 +29,7 @@ function ssiContent($filename, $authenticated)
 	elseif ($filename == "http://www.aiesecmichigan.com/joinep.php")
 		include ($_SERVER["DOCUMENT_ROOT"] . '/page/content/joinep.html');
 	elseif ($filename == "http://www.aiesecmichigan.com/costs.php")
-		include ($_SERVER["DOCUMENT_ROOT"] . '/page/content/joincosts.html');
+		include ($_SERVER["DOCUMENT_ROOT"] . '/page/content/aboutcosts.html');
 	elseif ($filename == "http://www.aiesecmichigan.com/funding.php")
 		include ($_SERVER["DOCUMENT_ROOT"] . '/page/content/joinfunding.html');
 	elseif ($filename == "http://www.aiesecmichigan.com/contact.php")
@@ -88,11 +88,10 @@ function ssiContent($filename, $authenticated)
 	return;
 }
 
-// Echoes the first description (shortened) of the given xml feed
+// Returns the given xml feed
 // Used for the first blog post from AIESEC Michigan Abroad
-function ssiXMLFirstDesc($url)
+function ssiXML($url)
 {
-	
    $curl_handle=curl_init();
    curl_setopt($curl_handle,CURLOPT_URL,$url);
    curl_setopt($curl_handle,CURLOPT_CONNECTTIMEOUT,2);
@@ -102,20 +101,9 @@ function ssiXMLFirstDesc($url)
          
    $xml = new SimpleXmlElement($data, LIBXML_NOCDATA);
 
-
-   echo "<h2>".$xml->channel->title."</h2>";
-   $cnt = count($xml->channel->item);
-   $url 	= $xml->channel->item[0]->link;
-   $title 	= $xml->channel->item[0]->title;
-   $desc = $xml->channel->item[0]->description->asXML();
- 
-   echo '<b><a target = "_blank" href="' . $url . '">' . $title . '</a></b><br>';
-   echo '<p>' . abbreviate(removehtml($desc)) . '</p>';
-
-	return;
+   return $xml;
 
 // Adapted from http://ditio.net/2008/06/19/using-php-curl-to-read-rss-feed-xml/
-	
 }
 
 ?>

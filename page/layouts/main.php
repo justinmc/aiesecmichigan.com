@@ -46,11 +46,10 @@ if ($_REQUEST["logout"])
 
 <?php
 
-include $_SERVER["DOCUMENT_ROOT"] . '/app/sql.php';
-include $_SERVER["DOCUMENT_ROOT"] . '/app/authentication.php';
-include $_SERVER["DOCUMENT_ROOT"] . '/app/io.php';
-include $_SERVER["DOCUMENT_ROOT"] . '/app/ssi.php';
-include $_SERVER["DOCUMENT_ROOT"] . '/app/announce.php';
+require $_SERVER["DOCUMENT_ROOT"] . '/app/authentication.php';
+require $_SERVER["DOCUMENT_ROOT"] . '/app/io.php';
+require $_SERVER["DOCUMENT_ROOT"] . '/app/ssi.php';
+require $_SERVER["DOCUMENT_ROOT"] . '/app/announce.php';
 
 $authenticated = authenticate($identifier); // identifier set at top
 
@@ -220,7 +219,16 @@ $authenticated = authenticate($identifier); // identifier set at top
          <div class = "hr"></div>
          <?php
 
-         ssiXMLFirstDesc('http://aiesecmichigan.blogspot.com/feeds/posts/default?alt=rss');
+         $xml = ssiXML('http://aiesecmichigan.blogspot.com/feeds/posts/default?alt=rss');
+
+	 echo "<h2>".$xml->channel->title."</h2>";
+   	 $cnt = count($xml->channel->item);
+   	 $url 	= $xml->channel->item[0]->link;
+   	 $title 	= $xml->channel->item[0]->title;
+   	 $desc = $xml->channel->item[0]->description->asXML();
+ 
+   	 echo '<b><a target = "_blank" href="' . $url . '">' . $title . '</a></b><br>';
+   	 echo '<p>' . abbreviate(removehtml($desc)) . '</p>';
         
          ?>
          <a href = "http://aiesecmichigan.blogspot.com" target = "_blank">Read more at the AIESEC Michigan Abroad blog</a>
