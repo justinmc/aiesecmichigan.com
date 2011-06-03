@@ -7,7 +7,7 @@
  *****************************************************************************/
 
 
-require ($_SERVER["DOCUMENT_ROOT"] . '/app/config.php');
+require ($_SERVER["DOCUMENT_ROOT"] . '/private/config.php');
 
 // Accesses the database, returns an array of a given row
 function getDB ($table, $row)
@@ -68,7 +68,10 @@ function writeDB($row, $col, $string, $table)
          die('Could not connect: ' . mysql_error());
 
       mysql_select_db($db);
-	  mysql_query("UPDATE `$table` SET `$col` = '$string' WHERE `index` = $row LIMIT 1");
+	  $result = mysql_query("UPDATE `$table` SET `$col` = '$string' WHERE `index` = $row LIMIT 1");
+
+    if (!$result)
+        die("MYSQL ERROR: " . mysql_error());
 
       mysql_close($con);
 }
@@ -84,17 +87,17 @@ function insertLine($index, $string, $table)
 
 	mysql_select_db($db);
 
-	$query = "INSERT INTO `$table` VALUES (`$index";
+	$query = "INSERT INTO `$table` VALUES ('$index";
 	for ($i = 0; $i < sizeof($string); $i++)
-		$query = $query . "`, `" . $string[$i];
-	$query = $query . "`);";
+    {   $string[$i] = str_replace("\'", "''", $string[$i]);            // PHP to SQL apostrophe escape (\' to '')
+		$query = $query . "', '" . $string[$i];
+    }
+	$query = $query . "')";
 
-	echo "insertline working: " . $query . "\n";
+	$result = mysql_query($query);
 
-	$queryFake = "INSERT INTO `announcements` ( `index` , `date` , `by` , `text` ) VALUES ('5', '2011-04-23 00:07:59', 'Justin on phpmyadmin', 'Recruitment is closed for this summer. We'll be recruiting new members again in the fall.');";
-
-//	mysql_query($queryFake);
-	mysql_query("INSERT INTO `announcements` ( `index` , `date` , `by` , `text` ) VALUES ('6', '2011-04-23 00:07:59', 'Justin from code', 'Recruitment is closed for this summer. We'll be recruiting new members again in the fall.');");
+    if (!$result)
+        die("MYSQL ERROR: " . mysql_error());
 
     mysql_close($con);
 }

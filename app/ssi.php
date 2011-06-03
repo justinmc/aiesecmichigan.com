@@ -11,7 +11,6 @@
 function ssiAnnouncement()
 {
 	echo announceRead(0);
-
 }
 
 function ssiContent($filename, $authenticated)

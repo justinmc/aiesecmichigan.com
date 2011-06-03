@@ -16,3 +16,6 @@ A clean checkout of this repo will not run.  A config.php file is needed in the 
 	db			// the mysql database used by this project
 Also, the database must obviously be set up for the app to run!
 
+Right now:
+
+Working on the admin page, make it pretty and then do the login manager

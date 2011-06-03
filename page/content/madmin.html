@@ -1,42 +1,48 @@
-         <h1>Administrator Tools</h1>
-		 <p>
-		 Here you will be able to update the announcements in the bar on the left through
-		 your web browser, no code needed.  Coming soon, it doesn't work yet!
-		 </p>
-		 <br>
-		 <?php
+        <h1>Administrator Tools</h1>
+        <h2>Announcements</h2>
+		<p>
+		Here you can update the announcements in the bar on the left
+		by typing in what you want it to say below.  
+		</p>
+		<br>
+		<?php
 
-		 if ($_REQUEST["written"] == 1)
-			 echo "<b style = \"color: green\">Announcement Updated</b><br>\n";
+        if ($_REQUEST["written"] == 1)
+        echo "<b style = \"color: green\">Announcement Updated</b><br>\n";
 
-		 ?>
-		 <form method = "post" action = "../../app/announceAction.php?return=admin.php">
-         <textarea id="announcement" name="announcement" rows="10" cols="50">
-         <?php 
-         
-         ssiAnnouncement();
-         
-         ?>
-         </textarea>
-		 <br><br>
-		 <?php
+		?>
+		<form method = "post" action = "../../app/announceAction.php?return=admin.php">
+        <textarea id="announcement" name="announcement" rows="10" cols="50"><?php ssiAnnouncement(); ?></textarea>
+		<br><br>
+		<?php
 		 
-		 global $identifier;
+		global $identifier;
 
-		 echo "Changed by: <input type = \"text\" id = \"by\" value = \"";
-		 echo getParam('googleAccount', $identifier) . "\" READONLY>";
+		echo "Changed by: <input type = \"text\" id = \"by\" name = \"by\" value = \"";
+		echo getParam('googleAccount', $identifier) . "\" READONLY>";
 
-		 ?>
-		 
-		 <br><br>
-         <input type = "submit" value = "Submit">
- 		 </form>
+		?>
+		<br><br>
+        <input type = "submit" value = "Submit">
+ 		</form>
+		<br><br>
+        <h2>Logins</h2>
+        <table>
+        <tr>
+        <td><b>Title</b></td>
+        <td><b>Username</b></td>
+        <td><b>Password</b></td>
+        <td><b>Description</b></td>
+        <?php
 
-		 <br><br>
-		 <?php
+        include ($_SERVER["DOCUMENT_ROOT"] . '/private/adminLogins.php');
 
-		 announceWrite("Recruitment is closed for this summer.  We'll be recruiting new members again in the fall.", "justin");
+        foreach ($logins as $line)
+        {   echo "<tr>\n";
+            for ($i = 0; $i < 4; $i++)
+                echo "<td> $line[$i] </td>\n";
+            echo "</tr>\n";
+        }
 
-		 ?>
-		 <br>
-		 asdf
+        ?>
+        </table>
