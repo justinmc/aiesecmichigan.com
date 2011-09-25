@@ -102,4 +102,21 @@ function insertLine($index, $string, $table)
     mysql_close($con);
 }
 
+// Executes a SQL query and returns the result
+function query ($queryString)
+{	global $server, $username, $password, $db;
+
+	$con = mysql_connect($server, $username, $password);
+    if (!$con)
+    	die('Could not connect: ' . mysql_error());
+
+	mysql_select_db($db);
+    
+	$result = mysql_query($queryString);
+
+    mysql_close($con);
+
+    return ($result);
+}
+
 ?>

@@ -13,7 +13,7 @@ require $_SERVER["DOCUMENT_ROOT"] . '/app/sql.php';
 // Checks database for given email address to see if you're allowed in, on initial login
 function allowed($email)
 {
-	if (colCont('googleAccount', $email, "users") != -1)
+	if ((colCont('googleAccount', $email, "users") != -1) && (query("SELECT allowed FROM users WHERE googleAccount='$email'")))
 	   return 1;
 	else
 	   return 0;

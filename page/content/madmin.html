@@ -1,16 +1,20 @@
         <h1>Administrator Tools</h1>
+		<?php
+
+		$written = $_REQUEST["written"];
+        if ($written == 1)
+        	echo "<b style = \"color: green\">Update Received</b><br>\n";
+		else if ($written == -1)
+        	echo "<b style = \"color: red\">Update Failed</b><br>\n";
+
+		?>
+		<br>
         <h2>Announcements</h2>
 		<p>
 		Here you can update the announcements in the bar on the left
 		by typing in what you want it to say below.  
 		</p>
 		<br>
-		<?php
-
-        if ($_REQUEST["written"] == 1)
-        echo "<b style = \"color: green\">Announcement Updated</b><br>\n";
-
-		?>
 		<form method = "post" action = "../../app/announceAction.php?return=admin.php">
         <textarea id="announcement" name="announcement" rows="10" cols="50"><?php ssiAnnouncement(); ?></textarea>
 		<br><br>
@@ -25,24 +29,92 @@
 		<br><br>
         <input type = "submit" value = "Submit">
  		</form>
-		<br><br>
+ 		<br>
+		<br>
         <h2>Logins</h2>
-        <table>
+		<p>
+		All of the Google accounts listed below have access to the Members part of the site.  The name shows 
+		up on the top after they sign in.  You can remove accounts or add new accounts here.
+		</p>
+		<br><br>
+		<b>New account</b>
+		<form enctype="multipart/form-data" action="../../app/accountsAction.php" method="POST">
+		<input type = "text" id = "name" name = "name" value = "Name"></input>
+		<input type = "text" id = "account" name = "account" value = "Google Account"></input>
+		<input type="hidden" name="action" value="add" />
+		<input type = "submit" value = "Add">
+		</form>
+		<br>
+		<br>
+		<form method = "post" action = "../../app/accountsAction.php?return=admin.php">
+		<input type="hidden" name="action" value="remove" />
+        <table border = 0 width = 536 cellpadding = 2 cellspacing = 4>
         <tr>
-        <td><b>Title</b></td>
-        <td><b>Username</b></td>
-        <td><b>Password</b></td>
-        <td><b>Description</b></td>
+        <td><b>Name</b></td>
+        <td><b>Gmail</b></td>
+        <td><b>Remove</b></td>
+		</tr>
         <?php
 
-        include ($_SERVER["DOCUMENT_ROOT"] . '/private/adminLogins.php');
-
-        foreach ($logins as $line)
-        {   echo "<tr>\n";
-            for ($i = 0; $i < 4; $i++)
-                echo "<td> $line[$i] </td>\n";
-            echo "</tr>\n";
-        }
+		$rows = getrows("users");
+		for ($i = 0; $i < $rows; $i++)
+		{
+			$DATA = getdb("users", $i);
+			if ($DATA["allowed"])
+			{
+				echo "		<tr>\n";
+				echo "		<td>" . $DATA["name"] . "</td>\n";
+				echo "		<td>" . $DATA["googleAccount"] . "</td>\n";
+				echo "		<td><input type=\"radio\" name=\"index\" value=\"" . $DATA["index"] . "\" /></td>\n";
+				echo "		</tr>\n";
+			}
+		}
 
         ?>
-        </table>
+		</table>
+		<br>
+        <input type = "submit" value = "Remove">
+ 		</form>
+		<br><br>
+		<h2>File Uploader</h2>
+  		<p>
+      	Uploads files to http://www.aiesecmichigan.com/public/uploads/
+      	</p>
+      	<p>
+	    This script overwrites without warning!  Max files size is 5MB.
+    	</p>
+    	<br>
+    	<form enctype="multipart/form-data" action="../../app/uploader.php" method="POST">
+    	<input type="hidden" name="MAX_FILE_SIZE" value="10000000" />
+    	<input name="uploadedfile" type="file" /><br />
+    	<input type="submit" value="Upload File" />
+    	</form>
+		<br><br>
+		<h2>Accounts</h2>
+		<p>
+		We have a couple different accounts related to the maintenance of this website.  The details are listed below without the passwords for security reasons (though this page should be secure and only visable to Google Accounts on the list above).
+		</p>
+		<br>
+		<b>Hosting</b><br>
+		ipowerweb.com<br>
+		user: aiesecmi<br><br>
+
+		<b>FTP</b><br>
+		aiesecmi.ipower.com<br>
+		user: aiesecmi<br><br>
+
+		<b>Twitter</b><br>
+		user: aiesecmichigan<br><br>
+
+		<b>Facebook</b><br>
+		AIESEC Michigan page maintained by members' accounts<br><br>
+
+		<b>AIESEC Michigan Abroad Blog</b><br>
+		Blogspot<br>
+		aiesecmichigan.blogspot.com<br>
+		Maintained by members' accounts<br><br>
+
+		<b>Google Calendar</b><br>
+		https://www.google.com/calendar/embed?src=obmgqmj8k4kqfenkv7enp0vln4%40group.calendar.google.com&ctz=America/Lima<br>
+		Maintained by members' Google Accounts<br><br>
+		<br><br>

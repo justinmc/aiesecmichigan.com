@@ -50,7 +50,7 @@ require $_SERVER["DOCUMENT_ROOT"] . '/app/authentication.php';
 require $_SERVER["DOCUMENT_ROOT"] . '/app/io.php';
 require $_SERVER["DOCUMENT_ROOT"] . '/app/ssi.php';
 require $_SERVER["DOCUMENT_ROOT"] . '/app/announce.php';
-
+echo "go";
 $authenticated = authenticate($identifier); // identifier set at top
 
 ?>
